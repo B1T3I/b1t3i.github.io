@@ -1,0 +1,185 @@
+/* Projeto pessoal, aprendizado de HTML e CSS, by Miguel Arthur Menezes de Araujo
+Curso: Sistema de Informações 1° Período */
+
+
+/* === Seção do corpo ==== */
+
+#corpo {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+html::before {
+    content: '';
+    position: fixed;       /* fica fixo ao rolar */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('Imagens/CS-Legacy-Background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    filter: blur(2px);
+    opacity: 0.6;
+    transform: scale(1.05);  
+}
+
+body {
+   text-align: justify;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   margin: 0 auto;
+   box-sizing: border-box;
+   background: transparent;
+   position: relative;
+   max-width: 100%;
+}
+
+#cabecalho {
+   background-color: #1B3E6A;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   border-bottom: solid 5px #FF7A00;
+   box-sizing: border-box;
+   height: 100px;
+   z-index: 1;
+}
+
+#Logo-cabecalho {
+   height: 150px;
+   position: absolute;
+   left: 20px;
+   top: 40%;
+   transform: translateY(-50%);
+}
+
+#letreiro-cabecalho {
+    height: 400px;
+    padding: 50px;
+    transform: translateY(2px);
+}
+
+/* === Seção do corpo ==== */
+
+main {
+    padding: 20px;
+    color: #161616;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.teamslogo {
+    height: 50px;
+    margin: 0 auto;
+}
+
+table {
+    width: 60%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+tr {
+    border: solid 1px #000, #FF7A00;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #FFF;
+    color: #000;
+    padding: 10px;
+    border: solid 1px #000;
+    border-collapse: collapse;
+}
+
+td {
+    background-color: #FFF;
+    color: #000;
+      padding: 10px;
+    border: solid 1px #000;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+div .info-tabela {
+   float: left;
+   width: 500px;
+   padding: 20px;
+   box-sizing: border-box;
+   text-align: justify;
+   margin-top: 40px;
+}
+
+/* === Seção dos Cards ==== */
+
+#times h2 {
+    color: #000;
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+.cards-section {
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card-team {
+    background-color: #1B3E6A;
+    border-left: 4px solid #FF7A00;
+    border-radius: 8px;
+    padding: 20px;
+    width: 800px;
+    color: #ffffff;
+}
+
+.card-image {
+    height: 110px;
+    display: flex;
+    margin-left: 15px;
+    float: left;
+    padding: 15px;
+    margin-top: 25px;
+    padding-left: 0px;
+}
+
+#quadrado {
+    height: 130px;
+}
+
+.titulo-destaque {
+    display: block;
+    background-color: #FF7A00;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+
+/* === Seção do rodapé ==== */
+
+#rodape {
+   background-color: #1B3E6A;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   border-top: solid 5px #FF7A00;
+   box-sizing: border-box;
+   height: 100px;
+   color: #FFF;
+   z-index: 1;
+}
