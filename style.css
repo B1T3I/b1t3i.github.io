@@ -5,16 +5,21 @@ Curso: Sistema de Informações 1° Período */
 /* === Seção do corpo ==== */
 
 #corpo {
-    position: relative;
-    z-index: 1;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+}
+
+#apresentacao {
+    background-color: rgba(255, 255, 255, 0.384);
+    backdrop-filter: blur(4px);
+    border-radius: 8px;
+    padding: 1.5rem;
 }
 
 html::before {
     content: '';
-    position: fixed;       /* fica fixo ao rolar */
+    position: fixed;
+    /* fica fixo ao rolar */
     top: 0;
     left: 0;
     width: 100%;
@@ -24,40 +29,43 @@ html::before {
     background-position: center;
     background-repeat: no-repeat;
     z-index: -1;
-    filter: blur(2px);
     opacity: 0.6;
-    transform: scale(1.05);  
+    transform: scale(1.05);
 }
 
 body {
-   text-align: justify;
-   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   margin: 0 auto;
-   box-sizing: border-box;
-   background: transparent;
-   position: relative;
-   max-width: 100%;
+    text-align: justify;
+    font-family: 'Barlow', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background: transparent;
+    position: relative;
+    max-width: 100%;
+}
+
+h1 {
+    font-family: 'Raleway', sans-serif;
 }
 
 #cabecalho {
-   background-color: #1B3E6A;
-   width: 100%;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   position: relative;
-   border-bottom: solid 5px #FF7A00;
-   box-sizing: border-box;
-   height: 100px;
-   z-index: 1;
+    background-color: #1B3E6A;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-bottom: solid 5px #FF7A00;
+    box-sizing: border-box;
+    height: 100px;
+    z-index: 1;
 }
 
 #Logo-cabecalho {
-   height: 150px;
-   position: absolute;
-   left: 20px;
-   top: 40%;
-   transform: translateY(-50%);
+    height: 150px;
+    position: absolute;
+    left: 20px;
+    top: 40%;
+    transform: translateY(-50%);
 }
 
 #letreiro-cabecalho {
@@ -87,35 +95,56 @@ table {
     border-collapse: collapse;
     margin: 0 auto;
 }
-tr {
-    border: solid 1px #000, #FF7A00;
-    border-collapse: collapse;
+
+.tabela {
+  background-color: rgba(255, 255, 255, 0.384);
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+  padding: 1.5rem;
 }
 
-th {
+#table-title {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+table tr {
+    border: solid 1px #000, #FF7A00;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+table th {
     background-color: #FFF;
     color: #000;
     padding: 10px;
     border: solid 1px #000;
     border-collapse: collapse;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
 }
 
-td {
+table td {
     background-color: #FFF;
     color: #000;
-      padding: 10px;
+    padding: 10px;
     border: solid 1px #000;
     border-collapse: collapse;
     text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
 }
 
 div .info-tabela {
-   float: left;
-   width: 500px;
-   padding: 20px;
-   box-sizing: border-box;
-   text-align: justify;
-   margin-top: 40px;
+    float: left;
+    width: 500px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: justify;
+    margin-top: 40px;
 }
 
 /* === Seção dos Cards ==== */
@@ -124,11 +153,12 @@ div .info-tabela {
     color: #000;
     margin-bottom: 20px;
     font-size: 40px;
+    font-family: 'Exo 2';
 }
 
 .cards-section {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
 }
@@ -137,49 +167,55 @@ div .info-tabela {
     background-color: #1B3E6A;
     border-left: 4px solid #FF7A00;
     border-radius: 8px;
-    padding: 20px;
-    width: 800px;
+    padding: 30px;
+    width: 1200px;
     color: #ffffff;
 }
 
 .card-image {
-    height: 110px;
+    height: 120px;
     display: flex;
-    margin-left: 15px;
+    margin-left: 0px;
     float: left;
-    padding: 15px;
-    margin-top: 25px;
+    padding-right: 15px;
     padding-left: 0px;
-}
-
-#quadrado {
-    height: 130px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    width: 230px;
 }
 
 .titulo-destaque {
-    display: block;
+    display: flex;
     background-color: #FF7A00;
     color: #fff;
     font-size: 18px;
-    font-weight: bold;
     padding: 4px 8px;
     border-radius: 4px;
     margin-bottom: 10px;
+    font-family: 'Bebas Neue', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.cards-text {
+    font-size: 16px;
+    text-align: justify;
+    font-family: 'Barlow', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
 /* === Seção do rodapé ==== */
 
 #rodape {
-   background-color: #1B3E6A;
-   width: 100%;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   position: relative;
-   border-top: solid 5px #FF7A00;
-   box-sizing: border-box;
-   height: 100px;
-   color: #FFF;
-   z-index: 1;
+    background-color: #1B3E6A;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-top: solid 5px #FF7A00;
+    box-sizing: border-box;
+    height: 100px;
+    z-index: 1;
+    color: #FFF;
 }
