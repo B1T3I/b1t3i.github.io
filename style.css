@@ -7,6 +7,7 @@ Curso: Sistema de Informações 1° Período */
 #corpo {
     max-width: 1200px;
     margin: 0 auto;
+    color: #000;
 }
 
 #apresentacao {
@@ -14,12 +15,12 @@ Curso: Sistema de Informações 1° Período */
     backdrop-filter: blur(4px);
     border-radius: 8px;
     padding: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 html::before {
     content: '';
     position: fixed;
-    /* fica fixo ao rolar */
     top: 0;
     left: 0;
     width: 100%;
@@ -45,8 +46,9 @@ body {
 
 }
 
-h1 {
-    font-family: 'Raleway', sans-serif;
+h1, h2, h3 {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 800;
 }
 
 #cabecalho {
@@ -76,6 +78,33 @@ h1 {
     transform: translateY(2px);
 }
 
+#cabecalho header {
+    width: 100%;
+    display: contents;
+}
+
+/* === Responsividade Mobile ==== */
+
+@media (max-width: 768px) {
+    #cabecalho {
+        height: auto;
+        padding: 15px;
+        flex-direction: column;
+    }
+
+    #Logo-cabecalho {
+        height: 60px;
+        position: static;
+        transform: none;
+    }
+
+    #letreiro-cabecalho {
+        height: auto;
+        width: 80%;
+        padding: 10px;
+    }
+}
+
 /* === Seção do corpo ==== */
 
 main {
@@ -91,11 +120,16 @@ main {
     margin: 0 auto;
 }
 
+p {
+    line-height: 1.7;
+    letter-spacing: 0.3px;
+    word-spacing: 1px;
+}
+
 table {
     width: 60%;
-    margin-top: 20px;
     border-collapse: collapse;
-    margin: 0 auto;
+    margin: 20px auto 0;
 }
 
 .tabela {
@@ -103,16 +137,17 @@ table {
   backdrop-filter: blur(4px);
   border-radius: 8px;
   padding: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 #table-title {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-weight: 800;
   letter-spacing: 2px;
 }
 
 table tr {
-    border: solid 1px #000, #FF7A00;
+    border: solid 1px #FF7A00;
     border-collapse: collapse;
     text-align: center;
 }
@@ -123,8 +158,8 @@ table th {
     padding: 10px;
     border: solid 1px #FF7A00;
     border-collapse: collapse;
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 700;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 800;
     font-size: 0.85rem;
     letter-spacing: 1px;
 }
@@ -146,22 +181,34 @@ table tr:hover td {
     transition: background-color 0.2s ease;
 }
 
-div .info-tabela {
-    float: left;
-    width: 500px;
-    padding: 20px;
-    box-sizing: border-box;
-    text-align: justify;
-    margin-top: 40px;
+table a {
+    color: #FF7A00;
+    text-decoration: underline;
+}
+
+table a:hover {
+    color: #FF7A00;
+}
+
+table tr:last-child:hover td {
+    background-color: #161616;
+    color: #F5F5F5;
 }
 
 /* === Seção dos Cards ==== */
 
-#times h2 {
+#times h2,
+#jogadores h2 {
     color: #000;
     margin-bottom: 20px;
     font-size: 40px;
-    font-family: 'Exo 2';
+    font-family: 'Exo 2', sans-serif;
+}
+
+.card-team::after {
+    content: '';
+    display: block;
+    clear: both;
 }
 
 .cards-section {
@@ -176,7 +223,6 @@ div .info-tabela {
     border-left: 4px solid #FF7A00;
     border-radius: 8px;
     padding: 30px;
-    width: 1200px;
     color: #ffffff;
     width: 100%;
     max-width: 1200px;
@@ -192,7 +238,6 @@ div .info-tabela {
 
 .card-image {
     height: 120px;
-    display: flex;
     margin-left: 0px;
     float: left;
     padding-right: 15px;
@@ -202,6 +247,7 @@ div .info-tabela {
     margin-top: 0px;
     width: 230px;
 }
+
 
 .titulo-destaque {
     display: flex;
@@ -213,6 +259,7 @@ div .info-tabela {
     margin-bottom: 10px;
     font-family: 'Bebas Neue', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
+    flex-wrap: wrap;
 }
 
 .cards-text {
