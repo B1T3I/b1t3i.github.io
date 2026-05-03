@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS Legacy — Times</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/times.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Bebas+Neue&family=Exo+2:wght@700;800&family=Orbitron:wght@700;800&family=Raleway:wght@700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- HEADER — igual da home -->
+    <header id="cabecalho">
+        <a href="../index.html" id="logo">
+            COUNTER-STRIKE <span>LEGACY</span>
+        </a>
+        <nav id="nav-principal">
+            <a href="../index.html" class="nav-link">Home</a>
+            <a href="times.html" class="nav-link ativo">Times</a>
+            <a href="jogadores.html" class="nav-link">Jogadores</a>
+            <a href="majors.html" class="nav-link">Majors</a>
+            <a href="sobre.html" class="nav-link">Sobre</a>
+        </nav>
+    </header>
+
+    <main id="times-main">
+
+        <!-- TÍTULO DA PÁGINA -->
+        <section id="times-hero">
+            <p id="times-subtitulo">CS2 • COMPETITIVO</p>
+            <h1 id="times-titulo">Equipes do Cenário <span>Competitivo</span></h1>
+        </section>
+
+        <!-- SELETOR DE TIMES -->
+        <!-- Os botões trocam o time ativo via JS -->
+        <section id="seletor-times">
+            <button class="btn-time ativo" data-time="vitality">
+                <img src="../images/logos/vitalitylogo.png" alt="Vitality">
+                <span>Vitality</span>
+            </button>
+            <button class="btn-time" data-time="furia">
+                <img src="../images/logos/furialogo.png" alt="FURIA">
+                <span>FURIA</span>
+            </button>
+            <button class="btn-time" data-time="navi">
+                <img src="../images/logos/navilogo.png" alt="NaVi">
+                <span>NaVi</span>
+            </button>
+            <button class="btn-time" data-time="falcons">
+                <img src="../images/logos/falconslogo.png" alt="Falcons">
+                <span>Falcons</span>
+            </button>
+            <button class="btn-time" data-time="mouz">
+                <img src="../images/logos/mouzlogo.png" alt="MOUZ">
+                <span>MOUZ</span>
+            </button>
+        </section>
+
+        <!-- CARROSSEL -->
+        <!-- O JS troca as imagens conforme o time selecionado -->
+        <section id="carrossel-section">
+            <div id="carrossel">
+                <div id="carrossel-track">
+                    <!-- Imagens injetadas pelo JS -->
+                </div>
+                <button id="btn-prev" aria-label="Anterior">&#8592;</button>
+                <button id="btn-next" aria-label="Próximo">&#8594;</button>
+                <div id="carrossel-dots">
+                    <!-- Dots injetados pelo JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- CARD DO TIME -->
+        <!-- O JS preenche as informações conforme o time selecionado -->
+        <section id="card-time-section">
+            <div id="card-time">
+                <img id="card-logo" src="" alt="Logo do time">
+                <div id="card-info">
+                    <h2 id="card-nome"></h2>
+                    <p id="card-descricao"></p>
+                    <div id="card-detalhes">
+                        <div class="detalhe">
+                            <span class="detalhe-label">MAIOR CONQUISTA</span>
+                            <span class="detalhe-valor" id="card-conquista"></span>
+                        </div>
+                        <div class="detalhe">
+                            <span class="detalhe-label">PAÍS</span>
+                            <span class="detalhe-valor" id="card-pais"></span>
+                        </div>
+                        <div class="detalhe">
+                            <span class="detalhe-label">DESTAQUE</span>
+                            <span class="detalhe-valor" id="card-destaque"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="rodape">
+        <div class="footer-content">
+            <p>Projeto CS Legacy &mdash; By Miguel Arthur</p>
+            <p>Curso: Bacharelado em Sistemas de Informação</p>
+        </div>
+    </footer>
+
+    <script src="../js/header.js"></script>
+    <script src="../js/times.js"></script>
+
+</body>
+</html>

@@ -17,7 +17,7 @@
     text-align: center;
 
     /* Imagem de fundo ocupando tudo */
-    background-image: url('../images/cs_background.jpg');
+    background-image: url('../images/ui/cs_background.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* efeito parallax: fundo não rola com a página */
@@ -121,11 +121,10 @@
 
 /* 3 cards lado a lado com flexbox */
 #cards-curiosidades {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
-    flex-wrap: wrap; /* em mobile quebra para baixo */
-    max-width: 1100px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -134,11 +133,9 @@
     border-top: 3px solid var(--laranja);
     border-radius: 8px;
     padding: 40px 30px;
-    width: 300px;
-    flex: 1;               /* cresce para preencher o espaço */
-    min-width: 260px;      /* mas não encolhe demais */
-    max-width: 340px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    min-width: 0;
+    transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease;
 }
 
 .card-curiosidade:hover {
@@ -164,6 +161,12 @@
     font-size: 0.95rem;
     color: rgba(255, 255, 255, 0.65);
     text-align: left;
+}
+
+.card-curiosidade.visivel,
+.preview-card.visivel {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* === SEÇÃO PREVIEW DAS PÁGINAS === */
@@ -193,7 +196,7 @@
     min-height: 200px;
     background:
         linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)),
-        url('../images/cs_background.jpg');
+        url('../images/ui/cs_background.jpg');
     background-size: cover;
     background-position: center;
     border-radius: 10px;
@@ -203,7 +206,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .preview-card:hover {
@@ -242,10 +245,12 @@
     #cards-curiosidades {
         flex-direction: column;
         align-items: center;
+        grid-template-columns: 1fr;
     }
 
     .card-curiosidade {
         width: 100%;
         max-width: 100%;
     }
+
 }
