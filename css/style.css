@@ -1,0 +1,156 @@
+/* =============================================
+   style.css — Estilos globais (todas as páginas)
+   Projeto CS Legacy — Miguel Arthur
+   ============================================= */
+
+/* === Variáveis de cor === */
+:root {
+    --laranja: #FF7A00;
+    --laranja-escuro: #cc6200;
+    --preto: #111111;
+    --preto-card: #1A1A1A;
+    --branco: #F5F5F5;
+    --texto: #161616;
+}
+
+/* === Reset básico === */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Barlow', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0d0d0d;
+    color: var(--branco);
+    min-width: 320px;
+}
+
+h1, h2, h3 {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 800;
+}
+
+p {
+    line-height: 1.7;
+    letter-spacing: 0.3px;
+    word-spacing: 1px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* === Parte do Header === */
+#cabecalho {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: var(--preto);
+    border-bottom: 3px solid var(--laranja);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    z-index: 100;
+}
+
+#cabecalho.scrolled {
+    background-color: rgba(17, 17, 17, 0.7);
+    backdrop-filter: blur(10px);
+}
+
+#logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--branco);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 1.1;
+}
+
+#logo span {
+    color: var(--laranja);
+    display: block;
+    font-size: 0.6em;
+    letter-spacing: 6px;
+    text-align: center;
+}
+
+#brasil {
+    width: 50px;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* === NAV === */
+#nav-principal {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-link {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    color: var(--branco);
+    text-transform: uppercase;
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover e página ativa ficam com laranja embaixo */
+.nav-link:hover,
+.nav-link.ativo {
+    color: var(--laranja);
+    border-bottom: 2px solid var(--laranja);
+}
+
+/* === FOOTER === */
+#rodape {
+    background-color: var(--preto);
+    border-top: 3px solid var(--laranja);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--branco);
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.9rem;
+    gap: 4px;
+    opacity: 0.7;
+}
+
+/* === Responsividade Mobile === */
+@media (max-width: 768px) {
+    #cabecalho {
+        padding: 0 20px;
+    }
+
+    #logo {
+        height: 35px;
+    }
+
+    #nav-principal {
+        gap: 15px;
+    }
+
+    .nav-link {
+        font-size: 0.75rem;
+    }
+}
