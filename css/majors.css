@@ -1,0 +1,294 @@
+/* === HERO === */
+#majors-hero {
+    padding: 130px 40px 70px;
+    text-align: center;
+    background:
+        linear-gradient(rgba(0,0,0,0.75), #0d0d0d),
+        url("../images/ui/cs_background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#majors-hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3rem, 8vw, 6rem);
+    color: var(--branco);
+}
+
+#majors-hero h1 span {
+    color: var(--laranja);
+}
+
+#majors-hero p {
+    max-width: 700px;
+    margin: 10px auto;
+    color: rgba(255,255,255,0.75);
+}
+
+/* === SEÇÕES === */
+.majors-section {
+    padding: 70px 40px;
+    background: #0d0d0d;
+}
+
+.majors-section.dark {
+    background: #080808;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    color: var(--branco);
+    margin-bottom: 20px;
+}
+
+.container p {
+    color: rgba(255,255,255,0.7);
+    line-height: 1.6;
+}
+
+/* === GRID === */
+.majors-timeline {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 45px;
+}
+
+.major-card {
+    position: relative;
+    background: var(--preto-card);
+    border-radius: 10px;
+    overflow: hidden;
+    border-top: 3px solid var(--laranja);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.major-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 28px rgba(255, 122, 0, 0.2);
+}
+
+.major-year {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 2;
+    background-color: var(--laranja);
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 800;
+    padding: 6px 10px;
+    border-radius: 4px;
+    letter-spacing: 1px;
+}
+
+.major-card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.8);
+}
+
+.major-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.major-info h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    color: var(--laranja);
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.major-info span {
+    display: block;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.55);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.major-info p {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.68);
+    line-height: 1.5;
+}
+
+/* === O QUE É UM MAJOR === */
+
+.major-highlight {
+    max-width: 900px;
+    margin: 40px auto 0;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.major-highlight img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.75);
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.major-highlight:hover img {
+    transform: scale(1.03);
+    filter: brightness(0.85);
+}
+
+/* Overlay escuro pra dar contraste no texto */
+.major-highlight::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.2),
+        rgba(0,0,0,0.85)
+    );
+    pointer-events: none;
+}
+
+/* Texto sobre a imagem */
+.major-highlight p {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+
+    color: var(--branco);
+    font-size: 1rem;
+    line-height: 1.5;
+
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 600;
+
+    z-index: 2;
+}
+
+.major-highlight {
+    border-top: 3px solid var(--laranja);
+}
+
+/* === LEGADO BRASIL ==== */
+.legacy-section {
+    background-color: #050505;
+    padding: 80px 40px;
+}
+
+.legacy-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.legacy-card {
+    position: relative;
+    background: #111;
+    border-radius: 10px;
+    overflow: hidden;
+    border-left: 4px solid #FFD700;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.legacy-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+}
+
+.legacy-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    filter: brightness(0.75);
+}
+
+.legacy-info {
+    padding: 24px;
+    text-align: left;
+}
+
+.legacy-info h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    color: #FFD700;
+    margin-bottom: 6px;
+}
+
+.legacy-info span {
+    display: block;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 10px;
+}
+
+.legacy-info p {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.6;
+}
+
+.legacy-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        rgba(0, 150, 0, 0.1),
+        transparent
+    );
+    pointer-events: none;
+}
+
+
+
+/* RESPONSIVO */
+@media (max-width: 1150px) {
+    .majors-timeline {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .majors-timeline {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 520px) {
+    .majors-timeline {
+        grid-template-columns: 1fr;
+    }
+
+    .major-card img {
+        height: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+    .major-highlight img {
+        height: 220px;
+    }
+
+    .major-highlight p {
+        font-size: 0.9rem;
+        bottom: 15px;
+        left: 15px;
+        right: 15px;
+    }
+}

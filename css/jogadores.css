@@ -1,0 +1,230 @@
+/* =============================================
+   jogadores.css — Página de jogadores
+   Projeto CS Legacy
+   ============================================= */
+
+/* === HERO === */
+
+#jogadores-hero {
+    padding: 130px 40px 70px;
+    text-align: center;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.75), rgba(13, 13, 13, 1)),
+        url("../images/ui/cs_background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.section-tag {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+    color: var(--laranja);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.section-tag.gold {
+    color: #FFD700;
+}
+
+#jogadores-hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3rem, 8vw, 6rem);
+    line-height: 1;
+    color: var(--branco);
+    margin-bottom: 20px;
+}
+
+#jogadores-hero h1 span {
+    color: var(--laranja);
+}
+
+#jogadores-hero > p:last-child {
+    max-width: 700px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.1rem;
+}
+
+/* === SEÇÕES === */
+
+.players-section {
+    padding: 80px 40px;
+    background-color: #0d0d0d;
+}
+
+.legends-section {
+    background-color: #080808;
+}
+
+.section-header {
+    max-width: 760px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.section-header h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    color: var(--branco);
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+}
+
+.section-header p:last-child {
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 1rem;
+}
+
+/* === GRID === */
+
+.players-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+}
+
+.legends-grid {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+/* === CARDS === */
+
+.player-card {
+    background-color: var(--preto-card);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.player-card:hover {
+    transform: translateY(-6px);
+}
+
+.player-card.destaque {
+    border-top: 4px solid var(--laranja);
+}
+
+.player-card.destaque:hover {
+    box-shadow: 0 10px 28px rgba(255, 122, 0, 0.22);
+}
+
+.player-card.legend {
+    position: relative;
+    background-color: #111111;
+    border-left: 4px solid #FFD700;
+}
+
+.player-card.legend::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 215, 0, 0.06),
+        transparent
+    );
+    pointer-events: none;
+}
+
+.player-card.legend:hover {
+    box-shadow: 0 10px 28px rgba(255, 215, 0, 0.16);
+}
+
+.player-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(15%);
+    transition: filter 0.25s ease, transform 0.25s ease;
+}
+
+.player-card:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.03);
+}
+
+.player-content {
+    padding: 22px;
+}
+
+.player-content h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    color: var(--branco);
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.player-card.destaque .player-content h3 {
+    color: var(--laranja);
+}
+
+.player-card.legend .player-content h3 {
+    color: #FFD700;
+}
+
+.player-content span {
+    display: block;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.55);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+}
+
+.player-content p {
+    font-size: 0.92rem;
+    color: rgba(255, 255, 255, 0.68);
+    line-height: 1.6;
+    text-align: left;
+}
+
+/* === RESPONSIVIDADE === */
+
+@media (max-width: 1100px) {
+    .players-grid,
+    .legends-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    #jogadores-hero {
+        padding: 110px 24px 55px;
+    }
+
+    .players-section {
+        padding: 60px 24px;
+    }
+
+    .players-grid,
+    .legends-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .player-card img {
+        height: 210px;
+    }
+}
+
+@media (max-width: 520px) {
+    .players-grid,
+    .legends-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .player-card img {
+        height: 260px;
+    }
+
+    .player-content {
+        padding: 20px;
+    }
+}

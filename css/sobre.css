@@ -1,0 +1,111 @@
+/* HERO */
+#sobre-hero {
+    padding: 130px 40px 70px;
+    text-align: center;
+    background:
+        linear-gradient(rgba(0,0,0,0.75), #0d0d0d),
+        url("../images/ui/cs_background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#sobre-hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3rem, 8vw, 6rem);
+    color: var(--branco);
+}
+
+#sobre-hero span {
+    color: var(--laranja);
+}
+
+#sobre-hero p {
+    max-width: 700px;
+    margin: 10px auto;
+    color: rgba(255,255,255,0.75);
+}
+
+/* SEÇÕES */
+.sobre-section {
+    padding: 70px 40px;
+    background: #0d0d0d;
+}
+
+.sobre-section.dark {
+    background: #080808;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    color: var(--branco);
+    margin-bottom: 20px;
+}
+
+.container p {
+    color: rgba(255,255,255,0.7);
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* TECNOLOGIAS */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.tech-card {
+    background: var(--preto-card);
+    border-top: 3px solid var(--laranja);
+    padding: 20px;
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column; /* 👈 ISSO AQUI */
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 700;
+    color: var(--branco);
+}
+
+.tech-card img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+/* LEGACY */
+.sobre-section.legacy {
+    background: #050505;
+}
+
+.btn-legacy {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: var(--laranja);
+    color: #fff;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 800;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
