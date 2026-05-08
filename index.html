@@ -4,129 +4,249 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>CS Legacy</title>
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/home.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Bebas+Neue&family=Exo+2:wght@700;800&family=Orbitron:wght@700;800&family=Raleway:wght@700;800&display=swap"
-        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Bebas+Neue&family=Exo+2:wght@700;800&family=Orbitron:wght@700;800&display=swap" rel="stylesheet">
 </head>
 
-
 <body>
-    
+
+    <!-- HEADER -->
     <header id="cabecalho">
+
         <a href="index.html" id="logo">
             COUNTER-STRIKE <span>LEGACY</span>
         </a>
+
+        <button id="menu-toggle" aria-label="Abrir menu">
+            ☰
+        </button>
+
         <nav id="nav-principal">
             <a href="index.html" class="nav-link ativo">Home</a>
             <a href="pages/times.html" class="nav-link">Times</a>
             <a href="pages/jogadores.html" class="nav-link">Jogadores</a>
             <a href="pages/majors.html" class="nav-link">Majors</a>
+            <a href="pages/galeria.html" class="nav-link">Galeria</a>
             <a href="pages/sobre.html" class="nav-link">Sobre</a>
         </nav>
+
     </header>
 
+    <!-- HERO -->
     <section id="hero">
+
         <div id="hero-overlay"></div>
+
         <div id="hero-content">
+
             <p id="hero-subtitulo">BEM-VINDO AO</p>
-            <h1 id="hero-titulo">COUNTER-STRIKE <span>LEGACY</span></h1>
-            <p id="hero-descricao">Rounds decididos em segundos. Títulos construídos em anos. Explore o melhor do Counter-Strike 2 competitivo.</p>
-                <a href="pages/times.html" id="hero-btn">CONHEÇA OS TIMES</a>
+
+            <h1 id="hero-titulo">
+                COUNTER-STRIKE <span>LEGACY</span>
+            </h1>
+
+            <p id="hero-descricao">
+                Rounds decididos em segundos. Títulos construídos em anos.
+                Explore o melhor do Counter-Strike 2 competitivo.
+            </p>
+
+            <a href="pages/times.html" id="hero-btn">
+                CONHEÇA OS TIMES
+            </a>
+
+        </div>
+
+        <div id="scroll-indicator">
+            ↓
+        </div>
+
+    </section>
+
+    <!-- CURIOSIDADES -->
+    <section id="curiosidades">
+
+        <h2 id="curiosidades-titulo">
+            CONHEÇA O CENÁRIO
+        </h2>
+
+        <div id="cards-curiosidades">
+
+            <div class="card-curiosidade">
+
+                <span class="card-icone">🎮</span>
+
+                <h3>O que é CS2?</h3>
+
+                <p>
+                    Counter-Strike 2 é o shooter tático mais icônico do mundo.
+                    Lançado em 2023, é a evolução direta do CS:GO e conta com milhões
+                    de jogadores e um dos maiores cenários competitivos dos e-sports.
+                </p>
+
             </div>
-            <!-- Seta animada indicando para rolar para baixo -->
-            <div id="scroll-indicator">&#8595;</div>
-        </section>
-        
-        <!-- SEÇÃO DE CURIOSIDADES -->
-        <!-- 3 cards informativos para quem não conhece o cenário -->
-        <section id="curiosidades">
-    <h2 id="curiosidades-titulo">CONHEÇA O CENÁRIO</h2>
 
-    <div id="cards-curiosidades">
+            <div class="card-curiosidade">
 
-        <div class="card-curiosidade">
-            <span class="card-icone">🎮</span>
-            <h3>O que é CS2?</h3>
-            <p>
-                Counter-Strike 2 é o shooter tático mais icônico do mundo. Lançado em 2023,
-                é a evolução direta do CS:GO e conta com milhões de jogadores e um dos maiores
-                cenários competitivos dos e-sports.
-            </p>
+                <span class="card-icone">🏆</span>
+
+                <h3>O que é um Major?</h3>
+
+                <p>
+                    Os Majors são os torneios mais prestigiados do CS2,
+                    organizados pela Valve. Com premiações milionárias e audiências
+                    gigantescas, são o sonho de todo time competitivo.
+                </p>
+
+            </div>
+
+            <div class="card-curiosidade">
+
+                <span class="card-icone">
+                    <img src="images/ui/bandeiras/brazil.svg.png" alt="Brasil" id="brasil">
+                </span>
+
+                <h3>Brasil no cenário</h3>
+
+                <p>
+                    O Brasil é uma das maiores potências do CS2 mundial.
+                    Com organizações históricas e jogadores lendários,
+                    o país continua produzindo talentos para o cenário internacional.
+                </p>
+
+            </div>
+
+            <div class="card-curiosidade">
+
+                <span class="card-icone">👑</span>
+
+                <h3>O que é o cenário competitivo?</h3>
+
+                <p>
+                    O cenário competitivo reúne equipes profissionais,
+                    grandes torneios e jogadores disputando títulos em nível mundial.
+                </p>
+
+            </div>
+
         </div>
 
-        <div class="card-curiosidade">
-            <span class="card-icone">🏆</span>
-            <h3>O que é um Major?</h3>
-            <p>
-                Os Majors são os torneios mais prestigiados do CS2, organizados pela Valve.
-                Com premiações milionárias e audiências que ultrapassam 1 milhão de espectadores
-                simultâneos, são o sonho de todo time competitivo.
-            </p>
-        </div>
+    </section>
 
-        <div class="card-curiosidade">
-            <span class="card-icone">
-                <img src="images/ui/bandeiras/brazil.svg.png" alt="Bandeira do Brasil" id="brasil">
-            </span>
-            <h3>Brasil no cenário</h3>
-            <p>
-                O Brasil é uma das maiores potências do CS2 mundial. Com a FURIA no topo do
-                ranking global e lendas como FalleN e KSCERATO, o país nunca parou de produzir
-                grandes talentos para o cenário internacional.
-            </p>
-        </div>
+    <!-- PREVIEW -->
+    <section id="preview">
 
-        <div class="card-curiosidade">
-            <span class="card-icone">👑</span>
-            <h3>O que é o cenário competitivo?</h3>
-            <p>
-                O cenário competitivo do CS2 reúne equipes profissionais, torneios internacionais
-                e grandes premiações. É nele que os melhores jogadores do mundo disputam títulos
-                e constroem suas carreiras.
-            </p>
-        </div>
+        <h2 id="preview-titulo">
+            EXPLORE O SITE
+        </h2>
 
-    </div>
-</section>
-        
-        <!-- SEÇÃO PREVIEW DAS PÁGINAS -->
-        <section id="preview">
-            <h2 id="preview-titulo">EXPLORE O SITE</h2>
-            <div id="preview-cards">
-                
-                <a href="pages/times.html" class="preview-card">
+        <div id="preview-cards">
+
+            <a href="pages/times.html" class="preview-card preview-times">
+
+                <div class="preview-overlay">
                     <h3>Times</h3>
-                    <p>Conheça as equipes que dominam o cenário competitivo atual.</p>
-                </a>
-                
-                <a href="pages/jogadores.html" class="preview-card">
-                    <h3>Jogadores</h3>
-                    <p>Veja os nomes que marcaram e ainda marcam a história do CS.</p>
-                </a>
-                
-        <a href="pages/ranking.html" class="preview-card">
-            <h3>Ranking</h3>
-            <p>Acompanhe os principais times e seus destaques no competitivo.</p>
-        </a>
-        
-    </div>
-</section>
 
-<!-- FOOTER -->
-    <footer id="rodape">
-        <span id="ano"></span>
-        <div class="footer-content">
-            <p>Projeto CS Legacy &mdash; By Miguel Arthur</p>
-            <p>Curso: Bacharelado em Sistemas de Informação</p>
+                    <p>
+                        Conheça as equipes que dominam o cenário competitivo atual.
+                    </p>
+                </div>
+
+            </a>
+
+            <a href="pages/jogadores.html" class="preview-card preview-jogadores">
+
+                <div class="preview-overlay">
+                    <h3>Jogadores</h3>
+
+                    <p>
+                        Veja os nomes que marcaram e ainda marcam a história do CS.
+                    </p>
+                </div>
+
+            </a>
+
+            <a href="pages/majors.html" class="preview-card preview-majors">
+
+                <div class="preview-overlay">
+                    <h3>Majors</h3>
+
+                    <p>
+                        Acompanhe os principais torneios e seus destaques no competitivo.
+                    </p>
+                </div>
+
+            </a>
+
+            <a href="pages/galeria.html" class="preview-card preview-galeria">
+
+                <div class="preview-overlay">
+                    <h3>Galeria</h3>
+
+                    <p>
+                        Descubra momentos marcantes do cenário competitivo.
+                    </p>
+                </div>
+
+            </a>
+
+            <a href="pages/sobre.html" class="preview-card preview-sobre">
+
+                <div class="preview-overlay">
+                    <h3>Sobre</h3>
+
+                    <p>
+                        Saiba mais sobre o projeto e as tecnologias utilizadas.
+                    </p>
+                </div>
+
+            </a>
+
         </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="rodape">
+
+        <div id="footer-top">
+
+            <a href="index.html" id="footer-logo">
+                COUNTER-STRIKE <span>LEGACY</span>
+            </a>
+
+            <nav id="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="pages/times.html">Times</a>
+                <a href="pages/jogadores.html">Jogadores</a>
+                <a href="pages/majors.html">Majors</a>
+                <a href="pages/galeria.html">Galeria</a>
+                <a href="pages/sobre.html">Sobre</a>
+            </nav>
+
+        </div>
+
+        <div id="footer-bottom">
+
+            <p>
+                CS Legacy © 2026 — By Miguel Arthur —
+                Bacharelado em Sistemas de Informação — UniRios
+            </p>
+
+        </div>
+
     </footer>
 
+    <script src="js/menu.js"></script>
     <script src="js/header.js"></script>
+
 </body>
 
 </html>

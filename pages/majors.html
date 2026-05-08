@@ -16,173 +16,199 @@
 
 <body>
 
-<header id="cabecalho">
-    <a href="../index.html" id="logo">
-        COUNTER-STRIKE <span>LEGACY</span>
-    </a>
+    <header id="cabecalho">
+        <a href="../index.html" id="logo">
+            COUNTER-STRIKE <span>LEGACY</span>
+        </a>
 
-    <nav id="nav-principal">
-        <a href="../index.html" class="nav-link">Home</a>
-        <a href="times.html" class="nav-link">Times</a>
-        <a href="jogadores.html" class="nav-link">Jogadores</a>
-        <a href="majors.html" class="nav-link ativo">Majors</a>
-        <a href="sobre.html" class="nav-link">Sobre</a>
-    </nav>
-</header>
+        <button id="menu-toggle" aria-label="Abrir menu">
+            ☰
+        </button>
 
-<main>
+        <nav id="nav-principal">
+            <a href="../index.html" class="nav-link">Home</a>
+            <a href="times.html" class="nav-link">Times</a>
+            <a href="jogadores.html" class="nav-link">Jogadores</a>
+            <a href="majors.html" class="nav-link ativo">Majors</a>
+            <a href="galeria.html" class="nav-link">Galeria</a>
+            <a href="sobre.html" class="nav-link">Sobre</a>
+        </nav>
+    </header>
 
-    <!-- HERO -->
-    <section id="majors-hero">
-        <p class="section-tag">CS2 • TORNEIOS</p>
-        <h1>Os Maiores <span>Majors</span></h1>
-        <p>
-            Os Majors são os torneios mais importantes do Counter-Strike,
-            reunindo as melhores equipes do mundo em busca do título mais prestigiado do cenário.
-        </p>
-    </section>
+    <main>
 
-    <!-- O QUE É UM MAJOR -->
-    <section class="majors-section">
-        <div class="container">
-            <h2>O que é um Major?</h2>
+        <!-- HERO -->
+        <section id="majors-hero">
+            <p class="section-tag">CS2 • TORNEIOS</p>
+            <h1>Os Maiores <span>Majors</span></h1>
             <p>
-                Os Majors são campeonatos oficiais organizados pela Valve, considerados o ápice do cenário competitivo.
-                Com premiações milionárias e enorme audiência global, vencer um Major é o maior objetivo de qualquer equipe profissional.
+                Os Majors são os torneios mais importantes do Counter-Strike,
+                reunindo as melhores equipes do mundo em busca do título mais prestigiado do cenário.
+            </p>
+        </section>
+
+        <!-- O QUE É UM MAJOR -->
+        <section class="majors-section">
+            <div class="container">
+                <h2>O que é um Major?</h2>
+                <p>
+                    Os Majors são campeonatos oficiais organizados pela Valve, considerados o ápice do cenário competitivo.
+                    Com premiações milionárias e enorme audiência global, vencer um Major é o maior objetivo de qualquer equipe profissional.
+                </p>
+            </div>
+
+            <div class="major-highlight">
+        <img src="../images/ui/major_arena.jpg" alt="Arena Major">
+        <p>Milhares de fãs assistem ao vivo os maiores confrontos do CS.</p>
+            </div>
+        </section>
+
+        <!-- MAJORS IMPORTANTES -->
+        <section class="majors-section dark">
+            <div class="container">
+                <h2>Últimos 5 Majors</h2>
+                <p>
+                    Uma linha do tempo com os torneios mais recentes que marcaram a transição
+                    do CS:GO para o CS2 e ajudaram a definir o cenário competitivo atual.
+                </p>
+
+                <div class="majors-timeline">
+
+                    <article class="major-card">
+                        <span class="major-year">2025</span>
+                        <img src="../images/ui/majors/budapest.png" alt="StarLadder Budapest Major 2025">
+                        <div class="major-info">
+                            <h3>Budapest Major</h3>
+                            <span>Campeão: Vitality</span>
+                            <p>Consolidação da Vitality como uma das forças dominantes da era CS2.</p>
+                        </div>
+                    </article>
+
+                    <article class="major-card">
+                        <span class="major-year">2025</span>
+                        <img src="../images/ui/majors/austin.jpg" alt="BLAST.tv Austin Major 2025">
+                        <div class="major-info">
+                            <h3>Austin Major</h3>
+                            <span>Campeão: Team Spirit</span>
+                            <p>Um dos grandes palcos recentes do CS2, reforçando a nova geração do competitivo.</p>
+                        </div>
+                    </article>
+
+                    <article class="major-card">
+                        <span class="major-year">2024</span>
+                        <img src="../images/ui/majors/shanghai.jpeg" alt="Perfect World Shanghai Major 2024">
+                        <div class="major-info">
+                            <h3>Shanghai Major</h3>
+                            <span>Campeão: Team Spirit</span>
+                            <p>Major que marcou a expansão global do CS2 com palco na China.</p>
+                        </div>
+                    </article>
+
+                    <article class="major-card">
+                        <span class="major-year">2024</span>
+                        <img src="../images/ui/majors/copenhagen.jpeg" alt="PGL Copenhagen Major 2024">
+                        <div class="major-info">
+                            <h3>Copenhagen Major</h3>
+                            <span>Campeão: NaVi</span>
+                            <p>Primeiro Major da era CS2, inaugurando uma nova fase do Counter-Strike competitivo.</p>
+                        </div>
+                    </article>
+
+                    <article class="major-card">
+                        <span class="major-year">2023</span>
+                        <img src="../images/ui/majors/paris.jpg" alt="BLAST.tv Paris Major 2023">
+                        <div class="major-info">
+                            <h3>Paris Major</h3>
+                            <span>Campeão: Vitality</span>
+                            <p>Último Major do CS:GO, encerrando uma era histórica antes da chegada do CS2.</p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- IMPORTÂNCIA -->
+        <section class="majors-section">
+            <div class="container">
+                <h2>Por que os Majors importam?</h2>
+                <p>
+                    Além da premiação, os Majors definem legados. Jogadores e equipes são lembrados por suas conquistas nesses torneios,
+                    e muitos dos maiores momentos da história do Counter-Strike aconteceram nesses palcos.
+                </p>
+            </div>
+        </section>
+
+        <!-- Legado -->
+        <section class="majors-section legacy-section">
+        <div class="container">
+            <p class="section-tag gold">LEGADO</p>
+            <h2>O auge do Brasil no Counter-Strike</h2>
+            <p>
+                O Brasil marcou a história do Counter-Strike com conquistas que colocaram o país
+                no topo do cenário mundial. Esses títulos representam o auge de uma geração lendária.
+            </p>
+
+            <div class="legacy-grid">
+
+                <article class="legacy-card">
+                    <img src="../images/ui/majors/columbos.jpg" alt="MLG Columbus 2016">
+                    <div class="legacy-info">
+                        <h3>MLG Columbus 2016</h3>
+                        <span>Campeão: Luminosity Gaming</span>
+                        <p>
+                            O primeiro Major vencido por um time brasileiro, marcando o início de uma era histórica
+                            liderada por FalleN e companhia.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="legacy-card">
+                    <img src="../images/ui/majors/cologne.jpg" alt="ESL One Cologne 2016">
+                    <div class="legacy-info">
+                        <h3>ESL One Cologne 2016</h3>
+                        <span>Campeão: SK Gaming</span>
+                        <p>
+                            A consagração definitiva do Brasil no cenário mundial, com a mesma base dominando
+                            o segundo Major consecutivo.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <footer id="rodape">
+
+        <div id="footer-top">
+
+            <a href="index.html" id="footer-logo">
+                COUNTER-STRIKE <span>LEGACY</span>
+            </a>
+
+            <nav id="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="times.html">Times</a>
+                <a href="jogadores.html">Jogadores</a>
+                <a href="majors.html">Majors</a>
+                <a href="galeria.html">Galeria</a>
+                <a href="sobre.html">Sobre</a>
+            </nav>
+
+        </div>
+
+        <div id="footer-bottom">
+            <p>
+                CS Legacy © 2026 — By Miguel Arthur — Bacharelado em Sistemas de Informação — UniRios
             </p>
         </div>
 
-        <div class="major-highlight">
-    <img src="../images/ui/major_arena.jpg" alt="Arena Major">
-    <p>Milhares de fãs assistem ao vivo os maiores confrontos do CS.</p>
-        </div>
-    </section>
+    </footer>
 
-    <!-- MAJORS IMPORTANTES -->
-    <section class="majors-section dark">
-    <div class="container">
-        <h2>Últimos 5 Majors</h2>
-        <p>
-            Uma linha do tempo com os torneios mais recentes que marcaram a transição
-            do CS:GO para o CS2 e ajudaram a definir o cenário competitivo atual.
-        </p>
-
-        <div class="majors-timeline">
-
-            <article class="major-card">
-                <span class="major-year">2025</span>
-                <img src="../images/ui/majors/budapest.png" alt="StarLadder Budapest Major 2025">
-                <div class="major-info">
-                    <h3>Budapest Major</h3>
-                    <span>Campeão: Vitality</span>
-                    <p>Consolidação da Vitality como uma das forças dominantes da era CS2.</p>
-                </div>
-            </article>
-
-            <article class="major-card">
-                <span class="major-year">2025</span>
-                <img src="../images/ui/majors/austin.jpg" alt="BLAST.tv Austin Major 2025">
-                <div class="major-info">
-                    <h3>Austin Major</h3>
-                    <span>Campeão: Team Spirit</span>
-                    <p>Um dos grandes palcos recentes do CS2, reforçando a nova geração do competitivo.</p>
-                </div>
-            </article>
-
-            <article class="major-card">
-                <span class="major-year">2024</span>
-                <img src="../images/ui/majors/shanghai.jpeg" alt="Perfect World Shanghai Major 2024">
-                <div class="major-info">
-                    <h3>Shanghai Major</h3>
-                    <span>Campeão: Team Spirit</span>
-                    <p>Major que marcou a expansão global do CS2 com palco na China.</p>
-                </div>
-            </article>
-
-            <article class="major-card">
-                <span class="major-year">2024</span>
-                <img src="../images/ui/majors/copenhagen.jpeg" alt="PGL Copenhagen Major 2024">
-                <div class="major-info">
-                    <h3>Copenhagen Major</h3>
-                    <span>Campeão: NaVi</span>
-                    <p>Primeiro Major da era CS2, inaugurando uma nova fase do Counter-Strike competitivo.</p>
-                </div>
-            </article>
-
-            <article class="major-card">
-                <span class="major-year">2023</span>
-                <img src="../images/ui/majors/paris.jpg" alt="BLAST.tv Paris Major 2023">
-                <div class="major-info">
-                    <h3>Paris Major</h3>
-                    <span>Campeão: Vitality</span>
-                    <p>Último Major do CS:GO, encerrando uma era histórica antes da chegada do CS2.</p>
-                </div>
-            </article>
-
-        </div>
-    </div>
-</section>
-
-    <!-- IMPORTÂNCIA -->
-    <section class="majors-section">
-        <div class="container">
-            <h2>Por que os Majors importam?</h2>
-            <p>
-                Além da premiação, os Majors definem legados. Jogadores e equipes são lembrados por suas conquistas nesses torneios,
-                e muitos dos maiores momentos da história do Counter-Strike aconteceram nesses palcos.
-            </p>
-        </div>
-    </section>
-
-    <!-- Legado -->
-     <section class="majors-section legacy-section">
-    <div class="container">
-        <p class="section-tag gold">LEGADO</p>
-        <h2>O auge do Brasil no Counter-Strike</h2>
-        <p>
-            O Brasil marcou a história do Counter-Strike com conquistas que colocaram o país
-            no topo do cenário mundial. Esses títulos representam o auge de uma geração lendária.
-        </p>
-
-        <div class="legacy-grid">
-
-            <article class="legacy-card">
-                <img src="../images/ui/majors/columbos.jpg" alt="MLG Columbus 2016">
-                <div class="legacy-info">
-                    <h3>MLG Columbus 2016</h3>
-                    <span>Campeão: Luminosity Gaming</span>
-                    <p>
-                        O primeiro Major vencido por um time brasileiro, marcando o início de uma era histórica
-                        liderada por FalleN e companhia.
-                    </p>
-                </div>
-            </article>
-
-            <article class="legacy-card">
-                <img src="../images/ui/majors/cologne.jpg" alt="ESL One Cologne 2016">
-                <div class="legacy-info">
-                    <h3>ESL One Cologne 2016</h3>
-                    <span>Campeão: SK Gaming</span>
-                    <p>
-                        A consagração definitiva do Brasil no cenário mundial, com a mesma base dominando
-                        o segundo Major consecutivo.
-                    </p>
-                </div>
-            </article>
-
-        </div>
-    </div>
-</section>
-</main>
-
-<footer id="rodape">
-    <div class="footer-content">
-        <p>Projeto CS Legacy &mdash; By Miguel Arthur</p>
-        <p>Curso: Bacharelado em Sistemas de Informação</p>
-    </div>
-</footer>
-
-<script src="../js/header.js"></script>
+    <script src="../js/header.js"></script>
+    <script src="../js/menu.js"></script>
 
 </body>
 </html>

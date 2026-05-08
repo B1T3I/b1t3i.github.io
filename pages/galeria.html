@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS Legacy — Galeria</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/galeria.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Bebas+Neue&family=Exo+2:wght@700;800&family=Orbitron:wght@700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header id="cabecalho">
+        <a href="../index.html" id="logo">
+            COUNTER-STRIKE <span>LEGACY</span>
+        </a>
+
+        <button id="menu-toggle" aria-label="Abrir menu">
+            ☰
+        </button>
+
+        <nav id="nav-principal">
+            <a href="../index.html" class="nav-link">Home</a>
+            <a href="times.html" class="nav-link">Times</a>
+            <a href="jogadores.html" class="nav-link">Jogadores</a>
+            <a href="majors.html" class="nav-link">Majors</a>
+            <a href="galeria.html" class="nav-link ativo">Galeria</a>
+            <a href="sobre.html" class="nav-link">Sobre</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="galeria-hero">
+            <p class="section-tag">CS2 • MOMENTOS</p>
+            <h1>Galeria do <span>Legado</span></h1>
+            <p>Imagens que representam conquistas, jogadores e momentos marcantes do cenário competitivo de Counter-Strike.</p>
+        </section>
+
+        <section id="galeria-section">
+
+            <!-- FILTROS -->
+            <div id="filtros-galeria">
+                <button class="filtro-btn ativo" data-filter="todos">Todos</button>
+                <button class="filtro-btn" data-filter="majors">Majors</button>
+                <button class="filtro-btn" data-filter="brasil">Brasil</button>
+                <button class="filtro-btn" data-filter="jogadores">Jogadores</button>
+                <button class="filtro-btn" data-filter="times">Times</button>
+            </div>
+
+            <!-- ===================== -->
+            <!-- SEÇÃO: MAJORS         -->
+            <!-- ===================== -->
+            <div class="galeria-secao" data-secao="todos majors">
+                <h2 class="secao-titulo">🏆 Majors</h2>
+                <div class="galeria-grid">
+
+                    <article class="galeria-card" data-category="brasil majors">
+                        <img src="../images/ui/majors/columbos.jpg" alt="MLG Columbus 2016">
+                        <div class="galeria-info">
+                            <h3>MLG Columbus 2016</h3>
+                            <p>Campeão: Luminosity Gaming</p>
+                        </div>
+                    </article>
+
+                    <article class="galeria-card" data-category="brasil majors">
+                        <img src="../images/ui/majors/cologne.jpg" alt="ESL One Cologne 2016">
+                        <div class="galeria-info">
+                            <h3>ESL One Cologne 2016</h3>
+                            <p>Campeão: SK Gaming</p>
+                        </div>
+                    </article>
+
+                    <article class="galeria-card" data-category="majors">
+                        <img src="../images/ui/majors/paris.jpg" alt="Paris Major 2023">
+                        <div class="galeria-info">
+                            <h3>Paris Major 2023</h3>
+                            <p>Campeão: Team Vitality</p>
+                        </div>
+                    </article>
+
+                    <article class="galeria-card" data-category="majors">
+                        <img src="../images/ui/majors/copenhagen.jpeg" alt="Copenhagen Major 2024">
+                        <div class="galeria-info">
+                            <h3>Copenhagen Major 2024</h3>
+                            <p>Campeão: Natus Vincere</p>
+                        </div>
+                    </article>
+
+                    <article class="galeria-card" data-category="majors">
+                        <img src="../images/ui/majors/budapest.png" alt="Budapest Major 2025">
+                        <div class="galeria-info">
+                            <h3>Budapest Major 2025</h3>
+                            <p>Campeão: Team Vitality</p>
+                        </div>
+                    </article>
+                    <article class="galeria-card" data-category="majors">
+                        <img src="../images/ui/majors/austin.jpg" alt="Austin Major 2025">
+                        <div class="galeria-info">
+                            <h3>Austin Major 2025</h3>
+                            <p>Campeão: Team TEAM SPIRIT</p>
+                        </div>
+                    </article>
+                    <article class="galeria-card" data-category="majors">
+                        <img src="../images/ui/majors/shanghai.jpeg" alt="Shanghai Major 2025">
+                        <div class="galeria-info">
+                            <h3>Shanghai Major 2025</h3>
+                            <p>Campeão: Team TEAM SPIRIT</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- ========================== -->
+            <!-- SEÇÃO: O LEGADO DO BRASIL  -->
+            <!-- ========================== -->
+            <div class="galeria-secao" data-secao="todos brasil">
+                <h2 class="secao-titulo">
+                    <img src="../images/ui/bandeiras/brazil.svg.png" alt="Bandeira do Brasil" class="bandeira-titulo">
+                    O Legado do Brasil
+                </h2>
+                <div class="galeria-grid">
+
+                    <article class="galeria-card card-brasil" data-category="brasil majors">
+                        <img src="../images/ui/majors/columbos.jpg" alt="Luminosity Gaming no MLG Columbus 2016">
+                        <div class="galeria-info">
+                            <h3>MLG Columbus 2016</h3>
+                            <p>O primeiro Major brasileiro, liderado por FalleN e coldzera.</p>
+                        </div>
+                    </article>
+
+                    <article class="galeria-card card-brasil" data-category="brasil majors">
+                        <img src="../images/ui/majors/cologne.jpg" alt="SK Gaming campeã da ESL One Cologne 2016">
+                        <div class="galeria-info">
+                            <h3>ESL One Cologne 2016</h3>
+                            <p>A consagração da era brasileira no cenário mundial.</p>
+                        </div>
+                    </article>
+
+                    <article class="galeria-card card-brasil" data-category="brasil">
+                        <img src="../images/times/furia/win1.jpg" alt="FURIA campeã do IEM Chengdu 2025">
+                        <div class="galeria-info">
+                            <h3>FURIA — IEM Chengdu 2025</h3>
+                            <p>O Brasil de volta ao topo do cenário mundial.</p>
+                        </div>
+                    </article>
+
+                    <article class="galeria-card card-brasil" data-category="brasil jogadores">
+                        <img src="../images/jogadores/fallen.jpg" alt="FalleN">
+                        <div class="galeria-info">
+                            <h3>FalleN</h3>
+                            <p>O Professor que construiu o CS brasileiro.</p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+            <!-- ======================= -->
+            <!-- SEÇÃO: FACES DA ELITE   -->
+            <!-- ======================= -->
+            <div class="galeria-secao" data-secao="todos jogadores">
+                <h2 class="secao-titulo">⭐ Faces da Elite</h2>
+
+                <!-- VITALITY -->
+                <div class="time-grupo">
+                    <h3 class="time-subtitulo">
+                        <img src="../images/logos/vitalitylogo.png" alt="Vitality" class="logo-subtitulo">
+                        Team Vitality
+                    </h3>
+                    <div class="galeria-grid">
+                        <article class="galeria-card" data-category="jogadores">
+                            <img src="../images/jogadores/ropz.jpg" alt="Ropz">
+                            <div class="galeria-info">
+                                <h3>Ropz</h3>
+                                <p>Precisão clínica, sem desperdício de bala.</p>
+                            </div>
+                        </article>
+                        <article class="galeria-card" data-category="jogadores">
+                            <img src="../images/jogadores/apex.jpg" alt="apEX">
+                            <div class="galeria-info">
+                                <h3>apEX</h3>
+                                <p>O capitão que comanda o caos com precisão.</p>
+                            </div>
+                        </article>
+                        <article class="galeria-card" data-category="jogadores">
+                            <img src="../images/jogadores/zywoo.jpg" alt="ZywOo">
+                            <div class="galeria-info">
+                                <h3>ZywOo</h3>
+                                <p>Melhor jogador do mundo, quatro vezes.</p>
+                            </div>
+                        </article>
+                        <article class="galeria-card" data-category="jogadores">
+                            <img src="../images/jogadores/flamez.jpg" alt="FlameZ">
+                            <div class="galeria-info">
+                                <h3>FlameZ</h3>
+                                <p>Entry fragger que transforma pressão em frags.</p>
+                            </div>
+                        </article>
+                        <article class="galeria-card" data-category="jogadores">
+                            <img src="../images/jogadores/mezii.jpg" alt="Mezii">
+                            <div class="galeria-info">
+                                <h3>Mezii</h3>
+                                <p>O suporte que faz os outros brilharem.</p>
+                            </div>
+                        </article>
+                    </div>
+
+                </div>
+
+                <!-- FURIA -->
+                <div class="time-grupo">
+                    <h3 class="time-subtitulo">
+                        <img src="../images/logos/furialogo.png" alt="FURIA" class="logo-subtitulo">
+                        FURIA Esports
+                    </h3>
+                    <div class="galeria-grid">
+                        <article class="galeria-card card-brasil" data-category="jogadores brasil">
+                            <img src="../images/jogadores/fallen.jpg" alt="FalleN">
+                            <div class="galeria-info">
+                                <h3>FalleN</h3>
+                                <p>Lenda viva do Counter-Strike brasileiro.</p>
+                            </div>
+                        </article>
+                        <article class="galeria-card card-brasil" data-category="jogadores brasil">
+                            <img src="../images/jogadores/yuurih.jpg" alt="yuurih">
+                            <div class="galeria-info">
+                                <h3>yuurih</h3>
+                                <p>O outro pilar que nunca saiu.</p>
+                            </div>
+                        </article>
+                        <article class="galeria-card card-brasil" data-category="jogadores brasil">
+                            <img src="../images/jogadores/yekindar.jpg" alt="yekindar">
+                            <div class="galeria-info">
+                                <h3>yekindar</h3>
+                                <p>A energia que a FURIA precisava.</p>
+                            </div>
+                        </article>
+                        <article class="galeria-card card-brasil" data-category="jogadores brasil">
+                            <img src="../images/jogadores/kscerato.png" alt="KSCERATO">
+                            <div class="galeria-info">
+                                <h3>KSCERATO</h3>
+                                <p>O pilar imortal da FURIA.</p>
+                            </div>
+                        </article>
+                        <article class="galeria-card card-brasil" data-category="jogadores brasil">
+                            <img src="../images/jogadores/molodoy.jpg" alt="molodoy">
+                            <div class="galeria-info">
+                                <h3>molodoy</h3>
+                                <p>O aluno do professor.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- NAVI -->
+                <div class="time-grupo">
+                    <h3 class="time-subtitulo">
+                        <img src="../images/logos/navilogo.png" alt="NaVi" class="logo-subtitulo">
+                        Natus Vincere
+                    </h3>
+                    <div class="galeria-grid">
+                        <article class="galeria-card" data-category="jogadores">
+                            <img src="../images/jogadores/s1mple.jpg" alt="s1mple">
+                            <div class="galeria-info">
+                                <h3>s1mple</h3>
+                                <p>O peso de uma era inteira.</p>
+                            </div>
+                        </article>
+                         <article class="galeria-card" data-category="jogadores">
+                            <img src="../images/jogadores/electronic.jpg" alt="electronic">
+                            <div class="galeria-info">
+                                <h3>electroNic</h3>
+                                <p>O parceiro que elevou o nível de todos ao redor.</p>
+                            </div>
+                        </article>
+                         <article class="galeria-card" data-category="jogadores">
+                            <img src="../images/jogadores/boombl4.jpg" alt="boombl4">
+                            <div class="galeria-info">
+                                <h3>boombl4</h3>
+                                <p>O IGL que conduziu a NaVi ao título de Estocolmo.</p>
+                            </div>
+                        </article>
+                         <article class="galeria-card" data-category="jogadores">
+                            <img src="../images/jogadores/flamie.jpg" alt="flamie">
+                            <div class="galeria-info">
+                                <h3>flamie</h3>
+                                <p>Anos de consistência ao lado da lenda.</p>
+                            </div>
+                        </article>
+                         <article class="galeria-card" data-category="jogadores">
+                            <img src="../images/jogadores/perfecto.jpg" alt="perfecto">
+                            <div class="galeria-info">
+                                <h3>perfecto</h3>
+                                <p>O suporte que completava o quebra-cabeça da NaVi.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- FALCONS -->
+                <div class="time-grupo">
+                    <h3 class="time-subtitulo">
+                        <img src="../images/logos/falconslogo.png" alt="Falcons" class="logo-subtitulo">
+                        Falcons Esports
+                    </h3>
+                    <div class="galeria-grid">
+                        <article class="galeria-card" data-category="jogadores">
+                            <img src="../images/jogadores/niko.jpg" alt="niko">
+                            <div class="galeria-info">
+                                <h3>niko</h3>
+                                <p>Um dos maiores riflers da história, agora de amarelo.</p>
+                            </div>
+                        </article>
+                        <article class="galeria-card" data-category="jogadores">
+                            <img src="../images/jogadores/m0nesy.jpg" alt="m0NESY">
+                            <div class="galeria-info">
+                                <h3>m0NESY</h3>
+                                <p>Nascido para isso.</p>
+                            </div>
+                        </article>
+                        <article class="galeria-card" data-category="jogadores">
+                            <img src="../images/jogadores/teses.jpg" alt="teses">
+                            <div class="galeria-info">
+                                <h3>TeSeS</h3>
+                                <p>O entry que abre caminho para as estrelas brilharem.</p>
+                            </div>
+                        </article>
+                        <article class="galeria-card" data-category="jogadores">
+                            <img src="../images/jogadores/kyxsan.jpg" alt="Kyxsan">
+                            <div class="galeria-info">
+                                <h3>Kyxsan</h3>
+                                <p>Conquistou seu primeiro título internacional com as Falcons.</p>
+                            </div>
+                        </article>
+                        <article class="galeria-card" data-category="jogadores">
+                            <img src="../images/jogadores/kyousuke.jpg" alt="Kyousuke">
+                            <div class="galeria-info">
+                                <h3>Kyousuke</h3>
+                                <p>O suporte japonês que completa o superteam.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- MOUZ -->
+                <div class="time-grupo">
+                    <h3 class="time-subtitulo">
+                        <img src="../images/logos/mouzlogo.png" alt="MOUZ" class="logo-subtitulo">
+                        MOUZ
+                    </h3>
+                    <div class="galeria-grid">
+                        <article class="galeria-card" data-category="jogadores">
+                            <img src="../images/jogadores/xertion.jpg" alt="xertioN">
+                            <div class="galeria-info">
+                                <h3>xertioN</h3>
+                                <p>O artilheiro da MOUZ.</p>
+                            </div>
+                        </article>
+                        <article class="galeria-card" data-category="jogadores">
+                            <img src="../images/jogadores/torzsi.jpg" alt="Torzsi">
+                            <div class="galeria-info">
+                                <h3>Torzsi</h3>
+                                <p>A AWP jovem que cresceu dentro do sistema MOUZ.</p>
+                            </div>
+                        </article>
+                        <article class="galeria-card" data-category="jogadores">
+                            <img src="../images/jogadores/spinx.jpg" alt="Spinx">
+                            <div class="galeria-info">
+                                <h3>Spinx</h3>
+                                <p>Versátil e decisivo, um dos melhores riflers do cenário.</p>
+                            </div>
+                        </article>
+                        <article class="galeria-card" data-category="jogadores">
+                            <img src="../images/jogadores/brollan.jpg" alt="Brollan">
+                            <div class="galeria-info">
+                                <h3>Brollan</h3>
+                                <p>Experiência e liderança para conduzir a nova geração.</p>
+                            </div>
+                        </article>
+                        <article class="galeria-card" data-category="jogadores">
+                            <img src="../images/jogadores/jimpphat.jpg
+                            " alt="jimpphat">
+                            <div class="galeria-info">
+                                <h3>Jimpphat</h3>
+                                <p>O finlandês que silencia os adversários sem fazer barulho.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ====================== -->
+            <!-- SEÇÃO: TIMES EM AÇÃO   -->
+            <!-- ====================== -->
+            <div class="galeria-secao" data-secao="todos times">
+                <h2 class="secao-titulo">🎮 Times em Ação</h2>
+                <div class="galeria-grid">
+
+                    <article class="galeria-card" data-category="times">
+                        <img src="../images/times/vitality/win1.jpg" alt="Team Vitality">
+                        <div class="galeria-info">
+                            <h3>Team Vitality</h3>
+                            <p>Dominância no cenário recente.</p>
+                        </div>
+                    </article>
+
+                    <article class="galeria-card card-brasil" data-category="times brasil">
+                        <img src="../images/times/furia/win1.jpg" alt="FURIA Esports">
+                        <div class="galeria-info">
+                            <h3>FURIA Esports</h3>
+                            <p>O orgulho do Brasil no CS2.</p>
+                        </div>
+                    </article>
+
+                    <article class="galeria-card" data-category="times">
+                        <img src="../images/times/natus/win1.jpg" alt="Natus Vincere">
+                        <div class="galeria-info">
+                            <h3>Natus Vincere</h3>
+                            <p>Uma lenda do Counter-Strike.</p>
+                        </div>
+                    </article>
+
+                    <article class="galeria-card" data-category="times">
+                        <img src="../images/times/falcons/win1.jpg" alt="Falcons Esports">
+                        <div class="galeria-info">
+                            <h3>Falcons Esports</h3>
+                            <p>A surpresa que virou potência.</p>
+                        </div>
+                    </article>
+
+                    <article class="galeria-card" data-category="times">
+                        <img src="../images/times/mouz/win1.jpg" alt="MOUZ">
+                        <div class="galeria-info">
+                            <h3>MOUZ</h3>
+                            <p>O projeto jovem que deu certo.</p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- MODAL -->
+    <div id="modal-galeria" class="modal-hidden">
+
+        <button id="fechar-modal">&times;</button>
+
+        <button id="modal-prev" class="modal-nav">&#10094;</button>
+
+        <img id="modal-img" src="" alt="">
+
+        <button id="modal-next" class="modal-nav">&#10095;</button>
+
+        <div id="modal-texto">
+            <h3 id="modal-titulo"></h3>
+            <p id="modal-descricao"></p>
+        </div>
+
+    </div>
+
+    <footer id="rodape">
+
+        <div id="footer-top">
+
+            <a href="index.html" id="footer-logo">
+                COUNTER-STRIKE <span>LEGACY</span>
+            </a>
+
+            <nav id="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="times.html">Times</a>
+                <a href="jogadores.html">Jogadores</a>
+                <a href="majors.html">Majors</a>
+                <a href="galeria.html">Galeria</a>
+                <a href="sobre.html">Sobre</a>
+            </nav>
+
+        </div>
+
+        <div id="footer-bottom">
+            <p>
+                CS Legacy © 2026 — By Miguel Arthur — Bacharelado em Sistemas de Informação — UniRios
+            </p>
+        </div>
+
+    </footer>
+
+    <script src="../js/menu.js"></script>
+    <script src="../js/header.js"></script>
+    <script src="../js/galeria.js"></script>
+
+</body>
+</html>

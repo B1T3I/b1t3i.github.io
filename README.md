@@ -13,6 +13,7 @@ O CS Legacy reúne informações sobre os principais times, jogadores e torneios
 - **Times** — Informações sobre equipes relevantes do cenário, com carrossel de conquistas e detalhes de cada time
 - **Jogadores** — Destaques atuais e lendas do Counter-Strike, organizados por impacto no cenário
 - **Majors** — Explicação dos principais torneios e apresentação dos Majors recentes, além do legado brasileiro
+- **Galeria** — Acervo visual do cenário competitivo, organizado em seções temáticas com filtros por categoria, visualização ampliada via modal e destaque especial para o legado brasileiro
 - **Sobre** — Contexto do projeto, objetivo e tecnologias utilizadas no desenvolvimento
 
 ## Tecnologias

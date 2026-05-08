@@ -1,0 +1,359 @@
+/* =============================================
+   galeria.css — Estilos da página Galeria
+   Projeto CS Legacy — Miguel Arthur
+   ============================================= */
+
+/* HERO */
+#galeria-hero {
+    padding: 130px 40px 70px;
+    text-align: center;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.72), #0d0d0d),
+        url("../images/ui/cs_background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.section-tag {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 4px;
+    color: var(--laranja);
+    margin-bottom: 10px;
+}
+
+#galeria-hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3rem, 8vw, 6rem);
+    color: var(--branco);
+    line-height: 1;
+}
+
+#galeria-hero h1 span {
+    color: var(--laranja);
+}
+
+#galeria-hero p {
+    max-width: 700px;
+    margin: 12px auto 0;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* SEÇÃO PRINCIPAL */
+#galeria-section {
+    padding: 70px 40px;
+    background-color: #0d0d0d;
+}
+
+/* FILTROS */
+#filtros-galeria {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 55px;
+}
+
+.filtro-btn {
+    background-color: var(--preto-card);
+    border: 2px solid transparent;
+    color: var(--branco);
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.filtro-btn:hover,
+.filtro-btn.ativo {
+    border-color: var(--laranja);
+    color: var(--laranja);
+    transform: translateY(-2px);
+}
+
+/* SEÇÕES DO "TODOS" */
+.galeria-secao {
+    max-width: 1200px;
+    margin: 0 auto 70px;
+}
+
+.galeria-secao.escondida {
+    display: none;
+}
+
+/* Título de cada seção */
+.secao-titulo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    color: var(--branco);
+    letter-spacing: 2px;
+    margin-bottom: 28px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--laranja);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Bandeira no título */
+.bandeira-titulo {
+    height: 28px;
+    width: auto;
+    border-radius: 3px;
+}
+
+/* Subtítulo de time dentro de Faces da Elite */
+.time-grupo {
+    margin-bottom: 40px;
+}
+
+.time-subtitulo {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-subtitulo {
+    height: 24px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* GRID */
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+    margin-bottom: 20px;
+}
+
+/* Overlay verde sutil só no canto superior esquerdo para cards do Brasil */
+.card-brasil {
+    border-top: 3px solid #FFD700;
+}
+
+.card-brasil::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+    background: radial-gradient(
+        ellipse at top left,
+        rgba(0, 155, 58, 0.18),
+        transparent 70%
+    );
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* CARD */
+.galeria-card {
+    position: relative;
+    height: 260px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: var(--preto-card);
+    border-top: 3px solid var(--laranja);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.galeria-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 28px rgba(255, 122, 0, 0.22);
+}
+
+.galeria-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.72);
+    transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.galeria-card:hover img {
+    transform: scale(1.05);
+    filter: brightness(0.9);
+}
+
+/* Gradiente escuro sobre a imagem */
+.galeria-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.88));
+    pointer-events: none;
+}
+
+/* Texto sobre o card */
+.galeria-info {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 18px;
+    z-index: 2;
+}
+
+.galeria-info h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.6rem;
+    color: var(--laranja);
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.galeria-info p {
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* MODAL */
+#modal-galeria {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.92);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+}
+
+#modal-galeria.modal-hidden {
+    display: none;
+}
+
+#modal-img {
+    max-width: 90%;
+    max-height: 72vh;
+    object-fit: contain;
+    border-radius: 10px;
+    border-top: 3px solid var(--laranja);
+}
+
+#modal-texto {
+    max-width: 800px;
+    margin-top: 18px;
+    text-align: center;
+}
+
+#modal-texto h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.4rem;
+    color: var(--laranja);
+}
+
+#modal-texto p {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+#fechar-modal {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    background: none;
+    border: none;
+    color: var(--branco);
+    font-size: 3rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+#fechar-modal:hover {
+    color: var(--laranja);
+}
+
+.modal-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+    border: 2px solid var(--laranja);
+    background-color: rgba(0, 0, 0, 0.55);
+
+    color: var(--branco);
+    font-size: 1.6rem;
+    cursor: pointer;
+
+    z-index: 2100;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#modal-prev {
+    left: 40px;
+}
+
+#modal-next {
+    right: 40px;
+}
+
+.modal-nav:hover {
+    background-color: var(--laranja);
+    color: #fff;
+}
+
+
+/* RESPONSIVO */
+@media (max-width: 620px) {
+    .modal-nav {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    #modal-prev {
+        left: 15px;
+    }
+
+    #modal-next {
+        right: 15px;
+    }
+}
+@media (max-width: 1000px) {
+    .galeria-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 620px) {
+    #galeria-section {
+        padding: 55px 22px;
+    }
+
+    .galeria-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria-card {
+        height: 240px;
+    }
+
+    #modal-img {
+        max-width: 100%;
+        max-height: 65vh;
+    }
+
+    #fechar-modal {
+        top: 15px;
+        right: 22px;
+    }
+}

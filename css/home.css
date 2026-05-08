@@ -2,174 +2,200 @@
    Projeto CS Legacy — Miguel Arthur
    Curso: Bacharelado em Sistema de Informações - UniRios
    ============================================= */
+/* HERO */
 
-/* === HERO SECTION ===
-   Ocupa 100vh = 100% da altura da tela (viewport height)
-   O header fixo tem 70px, então padding-top empurra o conteúdo para baixo dele
-*/
 #hero {
     position: relative;
+
     width: 100%;
     height: 100vh;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     text-align: center;
 
-    /* Imagem de fundo ocupando tudo */
-    background-image: url('../images/ui/cs_background.jpg');
+    background-image: url("../images/ui/cs_background.jpg");
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* efeito parallax: fundo não rola com a página */
+    background-attachment: fixed;
 }
 
-/* Camada escura sobre a imagem para o texto ficar legível */
 #hero-overlay {
     position: absolute;
-    inset: 0; /* equivale a top:0; left:0; right:0; bottom:0 */
-    background: rgba(0, 0, 0, 0.6);
+    inset: 0;
+
+    background: rgba(0,0,0,0.65);
 }
 
-/* O conteúdo do hero fica acima do overlay */
-/* z-index: 1 garante que fica na frente do overlay */
 #hero-content {
     position: relative;
-    z-index: 1;
-    padding: 20px;
+    z-index: 2;
+
     max-width: 800px;
+    padding: 20px;
 }
 
 #hero-subtitulo {
     font-family: 'Orbitron', sans-serif;
-    font-size: 0.85rem;
     letter-spacing: 4px;
+    font-size: 0.9rem;
+
     color: var(--laranja);
-    margin-bottom: 10px;
+
+    margin-bottom: 14px;
 }
 
 #hero-titulo {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(3rem, 10vw, 7rem); /* cresce e diminui com a tela */
+
+    font-size: clamp(3rem, 10vw, 7rem);
     line-height: 1;
+
     color: var(--branco);
+
     margin-bottom: 20px;
 }
 
-/* A palavra LEGACY fica laranja */
 #hero-titulo span {
     color: var(--laranja);
 }
 
 #hero-descricao {
-    font-size: clamp(1rem, 2vw, 1.2rem);
-    color: rgba(255, 255, 255, 0.8);
-    max-width: 560px;
+    max-width: 620px;
+
     margin: 0 auto 35px;
+
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.8);
 }
 
-/* Botão do hero */
 #hero-btn {
     display: inline-block;
+
+    padding: 14px 40px;
+
     background-color: var(--laranja);
-    color: #fff;
+
+    border-radius: 4px;
+
     font-family: 'Exo 2', sans-serif;
     font-weight: 800;
-    font-size: 1rem;
     letter-spacing: 2px;
-    padding: 14px 40px;
-    border-radius: 4px;
-    transition: background-color 0.2s ease, transform 0.2s ease;
+
+    transition: 0.2s ease;
 }
 
 #hero-btn:hover {
     background-color: var(--laranja-escuro);
-    transform: translateY(-2px);
+    transform: translateY(-3px);
 }
 
-/* Seta animada para indicar que rola para baixo */
 #scroll-indicator {
     position: absolute;
+
     bottom: 30px;
     left: 50%;
+
     transform: translateX(-50%);
-    z-index: 1;
-    font-size: 1.5rem;
+
     color: var(--laranja);
-    /* animação de subir e descer infinitamente */
+
+    font-size: 1.5rem;
+
     animation: bounce 1.5s infinite;
 }
 
 @keyframes bounce {
-    0%, 100% { transform: translateX(-50%) translateY(0); }
-    50%       { transform: translateX(-50%) translateY(8px); }
+
+    0%,100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(8px);
+    }
 }
 
-/* === SEÇÃO DE CURIOSIDADES === */
+/* CURIOSIDADES */
+
 #curiosidades {
-    background-color: #0d0d0d;
     padding: 80px 40px;
+
+    background-color: #0d0d0d;
+
     text-align: center;
 }
 
 #curiosidades-titulo {
     font-family: 'Orbitron', sans-serif;
+
     font-size: 1rem;
     letter-spacing: 4px;
+
     color: var(--laranja);
+
     margin-bottom: 50px;
 }
 
-/* 3 cards lado a lado com flexbox */
 #cards-curiosidades {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+
     gap: 30px;
-    max-width: 800px;
+
+    max-width: 900px;
     margin: 0 auto;
 }
 
 .card-curiosidade {
     background-color: var(--preto-card);
+
     border-top: 3px solid var(--laranja);
-    border-radius: 8px;
+
+    border-radius: 10px;
+
     padding: 40px 30px;
-    width: 100%;
-    min-width: 0;
-    transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease;
+
+    text-align: left;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card-curiosidade:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(255, 122, 0, 0.2);
+
+    box-shadow: 0 8px 22px rgba(255,122,0,0.2);
 }
 
 .card-icone {
-    font-size: 2.5rem;
     display: block;
-    margin-bottom: 15px;
+
+    font-size: 2.5rem;
+
+    margin-bottom: 18px;
 }
 
 .card-curiosidade h3 {
-    font-family: 'Exo 2', sans-serif;
-    font-size: 1.1rem;
-    color: var(--branco);
-    margin-bottom: 12px;
-    letter-spacing: 1px;
+    font-size: 1.6rem;
+
+    margin-bottom: 14px;
 }
 
 .card-curiosidade p {
-    font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.65);
-    text-align: left;
+    color: rgba(255,255,255,0.68);
+
+    line-height: 1.8;
 }
 
-.card-curiosidade.visivel,
-.preview-card.visivel {
-    opacity: 1;
-    transform: translateY(0);
+#brasil {
+    width: 50px;
+    border-radius: 4px;
 }
 
-/* === SEÇÃO PREVIEW DAS PÁGINAS === */
+/* PREVIEW */
+
 #preview {
     padding: 80px 40px;
     background-color: #111111;
@@ -187,70 +213,138 @@
 #preview-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+
     gap: 28px;
+
     max-width: 1100px;
     margin: 0 auto;
 }
 
 .preview-card {
-    min-height: 200px;
-    background:
-        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)),
-        url('../images/ui/cs_background.jpg');
-    background-size: cover;
-    background-position: center;
+    position: relative;
+    overflow: hidden;
+
+    min-height: 240px;
+
     border-radius: 10px;
     border-left: 4px solid var(--laranja);
-    padding: 28px;
-    color: var(--branco);
+
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.preview-card::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.45),
+            rgba(0,0,0,0.82)
+        );
+
+    z-index: 1;
 }
 
 .preview-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 10px 30px rgba(255, 122, 0, 0.25);
+
+    box-shadow: 0 8px 24px rgba(255,122,0,0.22);
 }
 
-.preview-card h3 {
+.preview-overlay {
+    position: relative;
+    z-index: 2;
+
+    padding: 24px;
+}
+
+.preview-overlay h3 {
     font-family: 'Exo 2', sans-serif;
-    font-size: 1.4rem;
+    font-size: 2rem;
+
     color: var(--laranja);
-    margin-bottom: 8px;
+
+    margin-bottom: 12px;
 }
 
-.preview-card p {
-    font-size: 0.95rem;
-    color: rgba(255,255,255,0.75);
+.preview-overlay p {
+    max-width: 280px;
+
+    color: rgba(255,255,255,0.82);
+
+    line-height: 1.7;
 }
 
-@media (max-width: 768px) {
+/* IMAGENS */
+
+.preview-times {
+    background-image:
+        url("../images/ui/previews/times.png");
+}
+
+.preview-jogadores {
+    background-image:
+        url("../images/ui/previews/jogadores2.png");
+
+    background-position: center top;
+}
+
+.preview-majors {
+    background-image:
+        url("../images/ui/previews/major_arena.jpg");
+}
+
+.preview-galeria {
+    background-image:
+        url("../images/ui/previews/galeria.png");
+}
+
+.preview-sobre {
+    background-image:
+        url("../images/ui/previews/sobre.png");
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+
     #preview-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #cards-curiosidades {
         grid-template-columns: 1fr;
     }
+
 }
 
-/* === Responsividade Mobile === */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
+
     #hero {
-        background-attachment: scroll; /* parallax desativado no mobile */
+        background-attachment: scroll;
     }
 
+    #preview,
     #curiosidades {
         padding: 60px 20px;
     }
 
-    #cards-curiosidades {
-        flex-direction: column;
-        align-items: center;
+    #preview-cards {
         grid-template-columns: 1fr;
-    }
-
-    .card-curiosidade {
-        width: 100%;
-        max-width: 100%;
     }
 
 }
