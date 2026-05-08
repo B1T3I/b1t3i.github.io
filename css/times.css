@@ -282,3 +282,15 @@
         grid-template-columns: 1fr;
     }
 }
+@media (max-width: 768px) {
+
+    #carrossel {
+        height: 320px;
+    }
+
+    #carrossel-track img {
+        object-fit: contain;
+        background-color: #080808;
+    }
+
+}

@@ -197,7 +197,7 @@ a {
     border: none;
     color: var(--branco);
     font-size: 2rem;
-   cursor: pointer;
+    cursor: pointer;
 }
 
 /* === Responsividade Mobile === */

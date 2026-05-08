@@ -3,8 +3,9 @@
 // Projeto CS Legacy
 // =============================================
 
-// === ELEMENTOS PRINCIPAIS ===
+// === ELEMENTOS ===
 const botoesFiltro = document.querySelectorAll(".filtro-btn");
+const secoesGaleria = document.querySelectorAll(".galeria-secao");
 const cardsGaleria = document.querySelectorAll(".galeria-card");
 
 const modal = document.getElementById("modal-galeria");
@@ -16,9 +17,20 @@ const fecharModal = document.getElementById("fechar-modal");
 const btnModalPrev = document.getElementById("modal-prev");
 const btnModalNext = document.getElementById("modal-next");
 
-// === ESTADO DA GALERIA ===
-let cardsVisiveis = Array.from(cardsGaleria);
+// === ESTADO ===
+let cardsVisiveis = [];
 let cardAtualIndex = 0;
+
+// === ATUALIZA CARDS VISÍVEIS ===
+function atualizarCardsVisiveis() {
+    cardsVisiveis = Array.from(cardsGaleria).filter(function (card) {
+        const secaoPai = card.closest(".galeria-secao");
+        const cardVisivel = card.style.display !== "none";
+        const secaoVisivel = !secaoPai || !secaoPai.classList.contains("escondida");
+
+        return cardVisivel && secaoVisivel;
+    });
+}
 
 // === FILTROS ===
 botoesFiltro.forEach(function (botao) {
@@ -31,53 +43,81 @@ botoesFiltro.forEach(function (botao) {
 
         botao.classList.add("ativo");
 
-        cardsGaleria.forEach(function (card) {
-            const categorias = card.dataset.category;
+        // Mostra tudo
+        if (filtro === "todos") {
+            secoesGaleria.forEach(function (secao) {
+                secao.classList.remove("escondida");
+            });
 
-            if (filtro === "todos" || categorias.includes(filtro)) {
-                card.classList.remove("escondido");
-            } else {
-                card.classList.add("escondido");
-            }
-        });
+            cardsGaleria.forEach(function (card) {
+                card.style.display = "";
+            });
+        } 
+        
+        // Filtra por categoria
+        else {
+            secoesGaleria.forEach(function (secao) {
+                const secaoFiltros = secao.dataset.secao || "";
+
+                if (secaoFiltros.includes(filtro)) {
+                    secao.classList.remove("escondida");
+                } else {
+                    secao.classList.add("escondida");
+                }
+            });
+
+            cardsGaleria.forEach(function (card) {
+                const categorias = card.dataset.category || "";
+
+                if (categorias.includes(filtro)) {
+                    card.style.display = "";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        }
 
         atualizarCardsVisiveis();
     });
 });
 
-// === ATUALIZA LISTA DE CARDS VISÍVEIS ===
-function atualizarCardsVisiveis() {
-    cardsVisiveis = Array.from(cardsGaleria).filter(function (card) {
-        return !card.classList.contains("escondido");
-    });
-}
-
 // === ABRIR MODAL ===
 function abrirModal(card) {
+    if (!modal || !modalImg || !modalTitulo || !modalDescricao) {
+        return;
+    }
+
     atualizarCardsVisiveis();
 
     cardAtualIndex = cardsVisiveis.indexOf(card);
 
     const img = card.querySelector("img");
-    const titulo = card.querySelector("h3").textContent;
-    const descricao = card.querySelector("p").textContent;
+    const titulo = card.querySelector("h3");
+    const descricao = card.querySelector("p");
 
     modalImg.src = img.src;
     modalImg.alt = img.alt;
-    modalTitulo.textContent = titulo;
-    modalDescricao.textContent = descricao;
+
+    modalTitulo.textContent = titulo ? titulo.textContent : "";
+    modalDescricao.textContent = descricao ? descricao.textContent : "";
 
     modal.classList.remove("modal-hidden");
 }
 
 // === FECHAR MODAL ===
 function fecharGaleriaModal() {
-    modal.classList.add("modal-hidden");
+    if (modal) {
+        modal.classList.add("modal-hidden");
+    }
 }
 
 // === TROCAR IMAGEM NO MODAL ===
 function trocarImagemModal(direcao) {
-    if (modal.classList.contains("modal-hidden")) {
+    if (!modal || modal.classList.contains("modal-hidden")) {
+        return;
+    }
+
+    if (cardsVisiveis.length === 0) {
         return;
     }
 
@@ -91,15 +131,17 @@ function trocarImagemModal(direcao) {
         cardAtualIndex = 0;
     }
 
-    const novoCard = cardsVisiveis[cardAtualIndex];
-    const img = novoCard.querySelector("img");
-    const titulo = novoCard.querySelector("h3").textContent;
-    const descricao = novoCard.querySelector("p").textContent;
+    const card = cardsVisiveis[cardAtualIndex];
+
+    const img = card.querySelector("img");
+    const titulo = card.querySelector("h3");
+    const descricao = card.querySelector("p");
 
     modalImg.src = img.src;
     modalImg.alt = img.alt;
-    modalTitulo.textContent = titulo;
-    modalDescricao.textContent = descricao;
+
+    modalTitulo.textContent = titulo ? titulo.textContent : "";
+    modalDescricao.textContent = descricao ? descricao.textContent : "";
 }
 
 // === CLIQUE NOS CARDS ===
@@ -109,29 +151,38 @@ cardsGaleria.forEach(function (card) {
     });
 });
 
-// === EVENTOS DO MODAL ===
-fecharModal.addEventListener("click", fecharGaleriaModal);
+// === BOTÃO FECHAR ===
+if (fecharModal) {
+    fecharModal.addEventListener("click", fecharGaleriaModal);
+}
 
-modal.addEventListener("click", function (event) {
-    if (event.target === modal) {
-        fecharGaleriaModal();
-    }
-});
+// === FECHAR CLICANDO FORA ===
+if (modal) {
+    modal.addEventListener("click", function (event) {
+        if (event.target === modal) {
+            fecharGaleriaModal();
+        }
+    });
+}
 
-// Botões internos do modal
-if (btnModalPrev && btnModalNext) {
-    btnModalPrev.addEventListener("click", function () {
+// === BOTÕES DO MODAL ===
+if (btnModalPrev) {
+    btnModalPrev.addEventListener("click", function (event) {
+        event.stopPropagation();
         trocarImagemModal(-1);
     });
+}
 
-    btnModalNext.addEventListener("click", function () {
+if (btnModalNext) {
+    btnModalNext.addEventListener("click", function (event) {
+        event.stopPropagation();
         trocarImagemModal(1);
     });
 }
 
-// Teclado
+// === TECLADO ===
 document.addEventListener("keydown", function (event) {
-    if (modal.classList.contains("modal-hidden")) {
+    if (!modal || modal.classList.contains("modal-hidden")) {
         return;
     }
 
@@ -148,5 +199,5 @@ document.addEventListener("keydown", function (event) {
     }
 });
 
-// Inicializa lista visível
+// === INICIALIZAÇÃO ===
 atualizarCardsVisiveis();
