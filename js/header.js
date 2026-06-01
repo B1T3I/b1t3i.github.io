@@ -1,14 +1,12 @@
-// Seleciona o header pelo id
-const header = document.getElementById('cabecalho');
+(() => {
+    const cabecalho = document.getElementById('cabecalho');
 
-// Escuta o evento de scroll da página
-window.addEventListener('scroll', function () {
+    if (!cabecalho) return;
 
-    // Se rolou mais de 50px, adiciona a classe 'scrolled'
-    if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
+    const atualizarHeader = () => {
+        cabecalho.classList.toggle('scrolled', window.scrollY > 50);
+    };
 
-});
+    atualizarHeader();
+    window.addEventListener('scroll', atualizarHeader);
+})();

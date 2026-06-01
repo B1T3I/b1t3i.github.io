@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS Legacy — Ferramentas</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/ferramentas.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Bebas+Neue&family=Exo+2:wght@700;800&family=Orbitron:wght@700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header id="cabecalho">
+        <a href="../index.html" id="logo">
+            COUNTER-STRIKE <span>LEGACY</span>
+        </a>
+        <button id="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+        <nav id="nav-principal">
+            <a href="../index.html" class="nav-link">Home</a>
+            <a href="times.html" class="nav-link">Times</a>
+            <a href="jogadores.html" class="nav-link">Jogadores</a>
+            <a href="majors.html" class="nav-link">Majors</a>
+            <a href="galeria.html" class="nav-link">Galeria</a>
+            <a href="ferramentas.html" class="nav-link ativo">Ferramentas</a>
+            <a href="sobre.html" class="nav-link">Sobre</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section id="ferramentas-hero">
+            <p class="section-tag">CS2 • UTILIDADES</p>
+            <h1>Ferramentas do <span>Jogador</span></h1>
+            <p>Recursos práticos para configurar sua experiência no Counter-Strike 2.</p>
+        </section>
+
+        <section id="ferramentas-section">
+
+            <!-- TABS -->
+            <div id="tabs">
+                <button class="tab-btn ativo" data-tab="bind">⌨️ Gerador de Bind</button>
+                <button class="tab-btn" data-tab="sensi">🖱️ Conversor de Sensibilidade</button>
+            </div>
+
+            <!-- ============================= -->
+            <!-- TAB: GERADOR DE BIND DE COMPRA -->
+            <!-- ============================= -->
+            <div id="tab-bind" class="tab-content ativo">
+                <p class="ferramenta-descricao">
+                    Selecione uma tecla e clique nas armas que quer comprar com ela. O bind gerado permite comprar tudo
+                    com um só botão no CS2.
+                </p>
+
+                <div class="ferramenta-card">
+
+                    <!-- SELETOR DE TECLA -->
+                    <div class="campo-grupo">
+                        <label>Tecla selecionada</label>
+                        <div id="tecla-selecionada-display">
+                            <span id="tecla-display-texto">Nenhuma tecla selecionada</span>
+                            <button id="btn-limpar-tecla" style="display:none">✕ Limpar</button>
+                        </div>
+                    </div>
+
+                    <!-- TECLADO VIRTUAL -->
+                    <div id="teclado-virtual">
+                        <div class="teclado-linha">
+                            <button class="tecla" data-key="F1">F1</button>
+                            <button class="tecla" data-key="F2">F2</button>
+                            <button class="tecla" data-key="F3">F3</button>
+                            <button class="tecla" data-key="F4">F4</button>
+                            <button class="tecla" data-key="F5">F5</button>
+                            <button class="tecla" data-key="F6">F6</button>
+                            <button class="tecla" data-key="F7">F7</button>
+                            <button class="tecla" data-key="F8">F8</button>
+                            <button class="tecla" data-key="F9">F9</button>
+                            <button class="tecla" data-key="F10">F10</button>
+                            <button class="tecla" data-key="F11">F11</button>
+                            <button class="tecla" data-key="F12">F12</button>
+                        </div>
+                        <div class="teclado-linha">
+                            <button class="tecla tecla-larga" data-key="TAB">Tab</button>
+                            <button class="tecla" data-key="Q">Q</button>
+                            <button class="tecla" data-key="W">W</button>
+                            <button class="tecla" data-key="E">E</button>
+                            <button class="tecla" data-key="R">R</button>
+                            <button class="tecla" data-key="T">T</button>
+                            <button class="tecla" data-key="Y">Y</button>
+                            <button class="tecla" data-key="U">U</button>
+                            <button class="tecla" data-key="I">I</button>
+                            <button class="tecla" data-key="O">O</button>
+                            <button class="tecla" data-key="P">P</button>
+                        </div>
+                        <div class="teclado-linha">
+                            <button class="tecla tecla-larga" data-key="CAPSLOCK">Caps</button>
+                            <button class="tecla" data-key="A">A</button>
+                            <button class="tecla" data-key="S">S</button>
+                            <button class="tecla" data-key="D">D</button>
+                            <button class="tecla" data-key="F">F</button>
+                            <button class="tecla" data-key="G">G</button>
+                            <button class="tecla" data-key="H">H</button>
+                            <button class="tecla" data-key="J">J</button>
+                            <button class="tecla" data-key="K">K</button>
+                            <button class="tecla" data-key="L">L</button>
+                        </div>
+                        <div class="teclado-linha">
+                            <button class="tecla" data-key="Z">Z</button>
+                            <button class="tecla" data-key="X">X</button>
+                            <button class="tecla" data-key="C">C</button>
+                            <button class="tecla" data-key="V">V</button>
+                            <button class="tecla" data-key="B">B</button>
+                            <button class="tecla" data-key="N">N</button>
+                            <button class="tecla" data-key="M">M</button>
+                        </div>
+                        <div class="teclado-linha">
+                            <span class="teclado-label">Numpad</span>
+                            <button class="tecla" data-key="KP_0">0</button>
+                            <button class="tecla" data-key="KP_1">1</button>
+                            <button class="tecla" data-key="KP_2">2</button>
+                            <button class="tecla" data-key="KP_3">3</button>
+                            <button class="tecla" data-key="KP_4">4</button>
+                            <button class="tecla" data-key="KP_5">5</button>
+                            <button class="tecla" data-key="KP_6">6</button>
+                            <button class="tecla" data-key="KP_7">7</button>
+                            <button class="tecla" data-key="KP_8">8</button>
+                            <button class="tecla" data-key="KP_9">9</button>
+                        </div>
+                        <div class="teclado-linha">
+                            <span class="teclado-label">Mouse</span>
+                            <button class="tecla" data-key="MOUSE3">M3</button>
+                            <button class="tecla" data-key="MOUSE4">M4</button>
+                            <button class="tecla" data-key="MOUSE5">M5</button>
+                        </div>
+                    </div>
+
+                    <!-- ARMAS -->
+                    <div id="armas-container">
+
+                        <div class="armas-grupo">
+                            <h4 class="armas-grupo-titulo">Pistolas</h4>
+                            <div class="armas-grid">
+                                <button class="arma-btn" data-buy="buy usps">USP-S<span
+                                        class="arma-preco">$200</span></button>
+                                <button class="arma-btn" data-buy="buy p2000">P2000<span
+                                        class="arma-preco">$200</span></button>
+                                <button class="arma-btn" data-buy="buy glock">Glock-18<span
+                                        class="arma-preco">$200</span></button>
+                                <button class="arma-btn" data-buy="buy elite">Dual Berettas<span
+                                        class="arma-preco">$300</span></button>
+                                <button class="arma-btn" data-buy="buy p250">P250<span
+                                        class="arma-preco">$300</span></button>
+                                <button class="arma-btn" data-buy="buy fiveseven">Five-SeveN<span
+                                        class="arma-preco">$500</span></button>
+                                <button class="arma-btn" data-buy="buy tec9">Tec-9<span
+                                        class="arma-preco">$500</span></button>
+                                <button class="arma-btn" data-buy="buy cz75a">CZ75-Auto<span
+                                        class="arma-preco">$500</span></button>
+                                <button class="arma-btn" data-buy="buy deagle">Desert Eagle<span
+                                        class="arma-preco">$700</span></button>
+                                <button class="arma-btn" data-buy="buy revolver">R8 Revolver<span
+                                        class="arma-preco">$600</span></button>
+                            </div>
+                        </div>
+
+                        <div class="armas-grupo">
+                            <h4 class="armas-grupo-titulo">Rifles</h4>
+                            <div class="armas-grid">
+                                <button class="arma-btn" data-buy="buy ak47">AK-47<span
+                                        class="arma-preco">$2700</span></button>
+                                <button class="arma-btn" data-buy="buy m4a1">M4A1-S<span
+                                        class="arma-preco">$2900</span></button>
+                                <button class="arma-btn" data-buy="buy m4a4">M4A4<span
+                                        class="arma-preco">$3100</span></button>
+                                <button class="arma-btn" data-buy="buy awp">AWP<span
+                                        class="arma-preco">$4750</span></button>
+                                <button class="arma-btn" data-buy="buy aug">AUG<span
+                                        class="arma-preco">$3300</span></button>
+                                <button class="arma-btn" data-buy="buy sg556">SG 553<span
+                                        class="arma-preco">$3000</span></button>
+                                <button class="arma-btn" data-buy="buy famas">FAMAS<span
+                                        class="arma-preco">$2050</span></button>
+                                <button class="arma-btn" data-buy="buy galilar">Galil AR<span
+                                        class="arma-preco">$1800</span></button>
+                                <button class="arma-btn" data-buy="buy ssg08">SSG 08<span
+                                        class="arma-preco">$1700</span></button>
+                                <button class="arma-btn" data-buy="buy scar20">SCAR-20<span
+                                        class="arma-preco">$5000</span></button>
+                                <button class="arma-btn" data-buy="buy g3sg1">G3SG1<span
+                                        class="arma-preco">$5000</span></button>
+                            </div>
+                        </div>
+
+                        <div class="armas-grupo">
+                            <h4 class="armas-grupo-titulo">SMGs</h4>
+                            <div class="armas-grid">
+                                <button class="arma-btn" data-buy="buy mp9">MP9<span
+                                        class="arma-preco">$1250</span></button>
+                                <button class="arma-btn" data-buy="buy mac10">MAC-10<span
+                                        class="arma-preco">$1050</span></button>
+                                <button class="arma-btn" data-buy="buy mp7">MP7<span
+                                        class="arma-preco">$1500</span></button>
+                                <button class="arma-btn" data-buy="buy mp5sd">MP5-SD<span
+                                        class="arma-preco">$1500</span></button>
+                                <button class="arma-btn" data-buy="buy ump45">UMP-45<span
+                                        class="arma-preco">$1200</span></button>
+                                <button class="arma-btn" data-buy="buy p90">P90<span
+                                        class="arma-preco">$2350</span></button>
+                                <button class="arma-btn" data-buy="buy bizon">PP-Bizon<span
+                                        class="arma-preco">$1400</span></button>
+                            </div>
+                        </div>
+
+                        <div class="armas-grupo">
+                            <h4 class="armas-grupo-titulo">Heavy</h4>
+                            <div class="armas-grid">
+                                <button class="arma-btn" data-buy="buy nova">Nova<span
+                                        class="arma-preco">$1050</span></button>
+                                <button class="arma-btn" data-buy="buy xm1014">XM1014<span
+                                        class="arma-preco">$2000</span></button>
+                                <button class="arma-btn" data-buy="buy mag7">MAG-7<span
+                                        class="arma-preco">$1300</span></button>
+                                <button class="arma-btn" data-buy="buy sawedoff">Sawed-Off<span
+                                        class="arma-preco">$1100</span></button>
+                                <button class="arma-btn" data-buy="buy m249">M249<span
+                                        class="arma-preco">$5200</span></button>
+                                <button class="arma-btn" data-buy="buy negev">Negev<span
+                                        class="arma-preco">$1700</span></button>
+                            </div>
+                        </div>
+
+                        <div class="armas-grupo">
+                            <h4 class="armas-grupo-titulo">Granadas</h4>
+                            <div class="armas-grid">
+                                <button class="arma-btn" data-buy="buy smokegrenade">Smoke<span
+                                        class="arma-preco">$300</span></button>
+                                <button class="arma-btn" data-buy="buy flashbang">Flashbang<span
+                                        class="arma-preco">$200</span></button>
+                                <button class="arma-btn" data-buy="buy hegrenade">HE Granada<span
+                                        class="arma-preco">$300</span></button>
+                                <button class="arma-btn" data-buy="buy molotov">Molotov<span
+                                        class="arma-preco">$400</span></button>
+                                <button class="arma-btn" data-buy="buy incgrenade">Incendiária<span
+                                        class="arma-preco">$600</span></button>
+                                <button class="arma-btn" data-buy="buy decoy">Decoy<span
+                                        class="arma-preco">$50</span></button>
+                            </div>
+                        </div>
+
+                        <div class="armas-grupo">
+                            <h4 class="armas-grupo-titulo">Equipamento</h4>
+                            <div class="armas-grid">
+                                <button class="arma-btn" data-buy="buy vesthelm">Armor + Helm<span
+                                        class="arma-preco">$1000</span></button>
+                                <button class="arma-btn" data-buy="buy vest">Armor<span
+                                        class="arma-preco">$650</span></button>
+                                <button class="arma-btn" data-buy="buy defuser">Kit Desarme<span
+                                        class="arma-preco">$400</span></button>
+                                <button class="arma-btn" data-buy="buy taser">Zeus<span
+                                        class="arma-preco">$200</span></button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- ITENS SELECIONADOS -->
+                    <div id="itens-selecionados">
+                        <span class="campo-grupo"><label>Itens selecionados</label></span>
+                        <div id="itens-lista">
+                            <span id="itens-vazio">Nenhum item selecionado</span>
+                        </div>
+                        <button id="btn-limpar-itens" style="display:none">Limpar itens</button>
+                    </div>
+
+                    <button class="btn-gerar" id="btn-gerar-bind">Gerar Bind</button>
+
+                    <!-- RESULTADO -->
+                    <div class="resultado-box" id="resultado-bind" style="display:none">
+                        <p class="resultado-label">Cole no console do CS2 (tecla ~):</p>
+                        <div class="resultado-codigo">
+                            <code id="bind-output"></code>
+                            <button class="btn-copiar" id="btn-copiar-bind" title="Copiar">📋</button>
+                        </div>
+                        <p class="resultado-dica">💡 Para abrir o console: Configurações → Jogo → Ativar console de
+                            desenvolvedor</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- =============================== -->
+            <!-- TAB: CONVERSOR DE SENSIBILIDADE  -->
+            <!-- =============================== -->
+            <div id="tab-sensi" class="tab-content">
+                <p class="ferramenta-descricao">
+                    Converta sua sensibilidade entre jogos mantendo o mesmo feeling de mira.
+                </p>
+
+                <div class="ferramenta-card">
+
+                    <div class="sensi-inputs">
+
+                        <div class="campo-grupo">
+                            <label for="sensi-de">Converter de</label>
+                            <select id="sensi-de"></select>
+                        </div>
+
+                        <div class="campo-grupo">
+                            <label for="sensi-para">Converter para</label>
+                            <select id="sensi-para"></select>
+                        </div>
+
+                        <div class="campo-grupo">
+                            <label for="sensi-valor">Sensibilidade</label>
+                            <input type="number" id="sensi-valor" placeholder="Ex: 1.5" step="0.01" min="0.01">
+                        </div>
+
+                        <div class="campo-grupo">
+                            <label for="sensi-dpi">DPI do Mouse</label>
+                            <input type="number" id="sensi-dpi" placeholder="Ex: 800" min="100" max="25600">
+                        </div>
+
+                    </div>
+
+                    <button class="btn-gerar" id="btn-converter-sensi">Converter</button>
+
+                    <!-- RESULTADO -->
+                    <div class="resultado-box" id="resultado-sensi" style="display:none">
+                        <div class="sensi-resultado-grid">
+
+                            <div class="sensi-stat">
+                                <span class="sensi-stat-label">eDPI Original</span>
+                                <span class="sensi-stat-valor" id="edpi-original"></span>
+                            </div>
+
+                            <div class="sensi-stat destaque">
+                                <span class="sensi-stat-label">Sensibilidade Convertida</span>
+                                <span class="sensi-stat-valor" id="sensi-convertida"></span>
+                            </div>
+
+                            <div class="sensi-stat">
+                                <span class="sensi-stat-label">eDPI Convertido</span>
+                                <span class="sensi-stat-valor" id="edpi-convertido"></span>
+                            </div>
+
+                            <div class="sensi-stat">
+                                <span class="sensi-stat-label">cm/360°</span>
+                                <span class="sensi-stat-valor" id="cm360"></span>
+                            </div>
+
+                        </div>
+                        <p class="resultado-dica">💡 eDPI = DPI × Sensibilidade. Quanto menor o eDPI, mais lenta é a
+                            mira.</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer id="rodape">
+        <div id="footer-top">
+            <a href="../index.html" id="footer-logo">
+                COUNTER-STRIKE <span>LEGACY</span>
+            </a>
+            <nav id="footer-nav">
+                <a href="../index.html">Home</a>
+                <a href="times.html">Times</a>
+                <a href="jogadores.html">Jogadores</a>
+                <a href="majors.html">Majors</a>
+                <a href="galeria.html">Galeria</a>
+                <a href="ferramentas.html">Ferramentas</a>
+                <a href="sobre.html">Sobre</a>
+            </nav>
+        </div>
+        <div id="footer-bottom">
+            <p>
+                <a id="github" href="https://github.com/B1T3I/b1t3i.github.io" target="_blank"
+                    rel="noopener noreferrer">Github
+                </a>
+                — Bacharelado em Sistemas de Informação — UniRios
+            </p>
+        </div>
+    </footer>
+
+    <script src="../js/header.js"></script>
+    <script src="../js/menu.js"></script>
+    <script src="../js/ferramentas.js"></script>
+
+</body>
+
+</html>

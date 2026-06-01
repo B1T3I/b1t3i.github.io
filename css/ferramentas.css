@@ -1,0 +1,480 @@
+/* =============================================
+   ferramentas.css
+   Projeto CS Legacy — Miguel Arthur
+   ============================================= */
+
+#ferramentas-hero {
+    padding: 130px 40px 70px;
+    text-align: center;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.75), #0d0d0d),
+        url("../images/ui/cs_background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.section-tag {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 4px;
+    color: var(--laranja);
+    margin-bottom: 10px;
+}
+
+#ferramentas-hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3rem, 8vw, 6rem);
+    color: var(--branco);
+    line-height: 1;
+}
+
+#ferramentas-hero h1 span { color: var(--laranja); }
+
+#ferramentas-hero p {
+    max-width: 600px;
+    margin: 12px auto 0;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* SEÇÃO */
+#ferramentas-section {
+    padding: 60px 40px 80px;
+    background-color: #0d0d0d;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* TABS */
+#tabs {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    background-color: var(--preto-card);
+    border: 2px solid transparent;
+    color: rgba(255, 255, 255, 0.6);
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 800;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.tab-btn:hover,
+.tab-btn.ativo {
+    border-color: var(--laranja);
+    color: var(--laranja);
+}
+
+.tab-content { display: none; }
+.tab-content.ativo { display: block; }
+
+.ferramenta-descricao {
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 28px;
+}
+
+/* CARD */
+.ferramenta-card {
+    background-color: var(--preto-card);
+    border-left: 4px solid var(--laranja);
+    border-radius: 10px;
+    padding: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* CAMPOS */
+.campo-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campo-grupo label {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: var(--laranja);
+    text-transform: uppercase;
+}
+
+.campo-grupo input,
+.campo-grupo select {
+    background-color: #0d0d0d;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    color: var(--branco);
+    font-family: 'Barlow', sans-serif;
+    font-size: 1rem;
+    padding: 12px 16px;
+    transition: border-color 0.2s ease;
+    width: 100%;
+}
+
+.campo-grupo input:focus,
+.campo-grupo select:focus {
+    outline: none;
+    border-color: var(--laranja);
+}
+
+.campo-grupo select option {
+    background-color: #1a1a1a;
+}
+
+/* TECLA SELECIONADA DISPLAY */
+#tecla-selecionada-display {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #0d0d0d;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    padding: 12px 16px;
+    min-height: 48px;
+}
+
+#tecla-display-texto {
+    color: rgba(255, 255, 255, 0.4);
+    font-style: italic;
+    flex: 1;
+}
+
+#tecla-display-texto.ativa {
+    color: var(--laranja);
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 1.1rem;
+}
+
+#btn-limpar-tecla {
+    background: none;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: rgba(255,255,255,0.5);
+    border-radius: 4px;
+    padding: 4px 10px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#btn-limpar-tecla:hover {
+    border-color: var(--laranja);
+    color: var(--laranja);
+}
+
+/* TECLADO VIRTUAL */
+#teclado-virtual {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+}
+
+.teclado-linha {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.teclado-label {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.6rem;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 1px;
+    min-width: 50px;
+    text-transform: uppercase;
+}
+
+.tecla {
+    background-color: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 3px solid rgba(255,255,255,0.08);
+    color: var(--branco);
+    border-radius: 5px;
+    padding: 8px 0;
+    min-width: 42px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.15s ease;
+    text-align: center;
+}
+
+.tecla:hover {
+    background-color: #2a2a2a;
+    border-color: var(--laranja);
+    color: var(--laranja);
+}
+
+.tecla.selecionada {
+    background-color: var(--laranja);
+    border-color: var(--laranja-escuro);
+    color: #fff;
+}
+
+.tecla-larga { min-width: 64px; }
+
+/* ARMAS */
+#armas-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.armas-grupo-titulo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: rgba(255,255,255,0.4);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.armas-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.arma-btn {
+    background-color: #111;
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--branco);
+    border-radius: 6px;
+    padding: 8px 14px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    transition: 0.15s ease;
+    min-width: 90px;
+}
+
+.arma-btn:hover {
+    border-color: var(--laranja);
+    color: var(--laranja);
+}
+
+.arma-btn.selecionada {
+    background-color: rgba(255, 122, 0, 0.15);
+    border-color: var(--laranja);
+    color: var(--laranja);
+}
+
+.arma-preco {
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.35);
+    font-weight: 400;
+}
+
+.arma-btn.selecionada .arma-preco {
+    color: rgba(255,122,0,0.6);
+}
+
+/* ITENS SELECIONADOS */
+#itens-selecionados {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#itens-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    min-height: 36px;
+    align-items: center;
+}
+
+#itens-vazio {
+    color: rgba(255,255,255,0.3);
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.item-tag {
+    background-color: rgba(255,122,0,0.15);
+    border: 1px solid var(--laranja);
+    color: var(--laranja);
+    border-radius: 4px;
+    padding: 4px 10px;
+    font-size: 0.8rem;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+}
+
+#btn-limpar-itens {
+    background: none;
+    border: 1px solid rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.4);
+    border-radius: 4px;
+    padding: 6px 14px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: 0.2s;
+}
+
+#btn-limpar-itens:hover {
+    border-color: var(--laranja);
+    color: var(--laranja);
+}
+
+/* BOTÃO GERAR */
+.btn-gerar {
+    background-color: var(--laranja);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 800;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 14px 32px;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-gerar:hover {
+    background-color: var(--laranja-escuro);
+    transform: translateY(-2px);
+}
+
+/* RESULTADO */
+.resultado-box {
+    background-color: #0d0d0d;
+    border: 2px solid rgba(255, 122, 0, 0.3);
+    border-radius: 8px;
+    padding: 24px;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.resultado-label {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: var(--laranja);
+    text-transform: uppercase;
+}
+
+.resultado-codigo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #111;
+    border-radius: 6px;
+    padding: 14px 16px;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.resultado-codigo code {
+    font-family: 'Courier New', monospace;
+    font-size: 0.95rem;
+    color: #4ade80;
+    flex: 1;
+    word-break: break-all;
+}
+
+.btn-copiar {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 4px;
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+}
+
+.btn-copiar:hover { transform: scale(1.2); }
+
+.resultado-dica {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.4);
+}
+
+/* SENSI */
+.sensi-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 16px;
+}
+
+.sensi-resultado-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 14px;
+}
+
+.sensi-stat {
+    background-color: #111;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sensi-stat.destaque {
+    border-color: var(--laranja);
+    background-color: rgba(255,122,0,0.08);
+}
+
+.sensi-stat-label {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 1.5px;
+    color: var(--laranja);
+    text-transform: uppercase;
+}
+
+.sensi-stat-valor {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    color: var(--branco);
+}
+
+/* GITHUB FOOTER LINK */
+#github {
+    color: var(--laranja);
+    font-weight: 700;
+    transition: opacity 0.2s;
+}
+
+#github:hover { opacity: 0.8; }
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    #ferramentas-section { padding: 40px 20px 60px; }
+    .ferramenta-card { padding: 20px 16px; }
+    .sensi-inputs { grid-template-columns: 1fr 1fr; }
+    .sensi-resultado-grid { grid-template-columns: 1fr 1fr; }
+    .btn-gerar { width: 100%; text-align: center; }
+    .teclado-linha { flex-wrap: wrap; }
+}
+
+@media (max-width: 480px) {
+    .sensi-inputs { grid-template-columns: 1fr; }
+    .sensi-resultado-grid { grid-template-columns: 1fr; }
+}
